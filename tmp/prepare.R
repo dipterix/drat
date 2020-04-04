@@ -12,10 +12,15 @@ drat::addRepo('dipterix', paste0('file:', proj_dir))
 
 source_path <- 'tmp/source/'
 github_path <- 'tmp/source/github'
+download_path <- 'tmp/downloads'
 binary_path <- file.path(proj_dir, 'tmp', os)
 dir.create(binary_path, recursive = TRUE, showWarnings = FALSE)
 dir.create(github_path, recursive = TRUE, showWarnings = FALSE)
+unlink(download_path, recursive = TRUE)
+dir.create(download_path, recursive = TRUE, showWarnings = FALSE)
 dir.create(file.path(proj_dir, 'bin', os, 'contrib', rver), recursive = TRUE, showWarnings = FALSE)
+
+
 
 dependencies <- list(
   'Rcpp' = list(
@@ -99,3 +104,12 @@ for(destfile in binary_packages){
 }
 
 
+# WARNING: Will download all dependent packages
+
+
+# CRAN packages
+cran_packages <- c("abind", "askpass", "assertthat", "backports", "base64enc", "base64url", "BH", "bigmemory.sri", "bit", "bit64", "bitops", "boot", "brew", "callr", "car", "carData", "cellranger", "circular", "class", "cli", "clipr", "clisymbols", "cluster", "codetools", "colorspace", "commonmark", "covr", "crayon", "crosstalk", "curl", "data.table", "desc", "devtools", "digest", "downloader", "DT", "ellipsis", "emmeans", "estimability",  "evaluate", "fansi", "farver", "fastmap", "fftwtools", "filelock", "forcats", "foreign", "freesurferformats", "fs", "fst", "future", "future.apply", "future.callr", "ggplot2", "gh", "gifti", "git2r", "globals", "glue", "grid", "gtable", "haven", "hdf5r", "highr", "hms", "htmltools", "htmlwidgets", "httpuv", "httr", "ini", "isoband", "jsonlite", "KernSmooth", "knitr", "labeling", "later", "lattice", "lazyeval", "lifecycle", "listenv", "lme4", "lmerTest", "lsmeans", "magrittr",  "maptools", "markdown", "Matrix", "MatrixModels", "memoise", "mgcv", "microbenchmark", "mime", "minqa", "munsell", "nlme", "nloptr", "nnet", "numDeriv", "openssl", "openxlsx", "oro.nifti", "pbkrtest", "pillar", "pkgbuild", "pkgconfig", "pkgfilecache", "pkgload", "plyr", "praise", "prettyunits", "processx", "progress", "progressr", "promises", "pryr", "ps", "purrr", "qs", "R.matlab", "R.methodsS3", "R.oo", "R.utils", "R6", "RApiSerialize", "rappdirs", "rcmdcheck",  "RColorBrewer", "RcppEigen", "RcppParallel", "RcppRedis", "readr", "readxl", "rematch", "remotes", "reshape2", "reticulate", "rex", "rio", "rlang", "rmarkdown", "RNifti", "roxygen2", "rpart", "rprojroot", "rstudioapi", "rversions", "scales", "servr", "sessioninfo", "shiny", "shinydashboard", "shinyFiles", "shinyjs", "signal", "sourcetools", "sp", "SparseM", "spatial", "startup", "stringi", "stringr", "survival", "synchronicity", "sys", "testthat", "tibble", "tidyselect", "tinytex", "txtq", "usethis", "utf8", "uuid", "vctrs", "viridisLite", "whisker", "withr", "xfun", "xml2", "xopen", "xtable", "yaml", "zip")
+
+
+
+download.packages(cran_packages, repos = "https://cran.rstudio.com/", type = 'source', destdir = download_path)
