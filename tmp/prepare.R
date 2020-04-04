@@ -112,4 +112,25 @@ cran_packages <- c("abind", "askpass", "assertthat", "backports", "base64enc", "
 
 
 
-download.packages(cran_packages, repos = "https://cran.rstudio.com/", type = 'source', destdir = download_path)
+download.packages(cran_packages, repos = "https://cran.rstudio.com/", 
+                  type = 'source', destdir = download_path)
+
+# Add to repo
+cran_extras <- list.files(download_path, pattern = 'gz$', full.names = TRUE)
+for(destfile in cran_extras){
+  drat::insertPackage(destfile)
+}
+
+# Remove temporary download folder
+unlink(download_path, recursive = TRUE)
+dir.create(download_path, recursive = TRUE, showWarnings = FALSE)
+
+# Download compiled code (work for macosx and windows)
+download.packages(cran_packages, repos = "https://cran.rstudio.com/", 
+                  type = 'binary', destdir = download_path)
+cran_extras <- list.files(download_path, pattern = 'gz$', full.names = TRUE)
+for(destfile in cran_extras){
+  drat::insertPackage(destfile)
+}
+
+unlink(download_path, recursive = TRUE)
