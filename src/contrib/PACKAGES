@@ -1,14 +1,14 @@
 Package: dipsaus
-Version: 0.0.5.1
+Version: 0.0.6
 Depends: R (>= 3.5.0)
 Imports: utils, grDevices, shiny, cli, stringr, parallel, jsonlite (>= 1.6), future,
           future.apply, progressr, Rcpp, RcppParallel, crayon, fastmap, base64url,
-          base64enc, txtq, synchronicity, digest, R6, rlang (>= 0.4.0)
+          base64enc, txtq, synchronicity, digest, R6, rlang (>= 0.4.0), startup
 LinkingTo: Rcpp, RcppParallel
 Suggests: microbenchmark, knitr, rmarkdown, testthat, promises, magrittr, glue, qs,
           RcppRedis, future.callr
 License: GPL-3
-MD5sum: 7300c3f6b787b5812cd39c2d9dd9713a
+MD5sum: c87975008ac0d4cf368a9c8c427d4a25
 NeedsCompilation: yes
 
 Package: rave
@@ -24,7 +24,7 @@ Imports: utils, stats, graphics, grDevices, glue, remotes, htmltools (>= 0.3.6),
           data.table (>= 1.11.8), pryr (>= 0.1.3), shinyFiles (>= 0.7.3)
 Suggests: knitr, rmarkdown, spelling, roxygen2, testthat, rstudioapi
 License: GPL-3
-MD5sum: 1fd4cb7a10e65d50fde6f1c26c51904c
+MD5sum: cd82fd266299fca78c4e06bd6089937f
 NeedsCompilation: no
 
 Package: ravebuiltins
@@ -36,15 +36,15 @@ Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus,
           DT, fst, htmltools, rave, rutabaga
 Suggests: devtools, rstudioapi (>= 0.9.0)
 License: MIT + file LICENSE
-MD5sum: 317dd7b11a9770dc4815b59dbba538af
+MD5sum: f431e87a601a08e4dd662e7e40192713
 NeedsCompilation: no
 
 Package: Rcpp
-Version: 1.0.4.5
+Version: 1.0.4.6
 Imports: methods, utils
 Suggests: tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)
 License: GPL (>= 2)
-MD5sum: e017ac1b4162e0d666f38fa25cac666c
+MD5sum: 771718d6779408b22dfa3cadd083a55f
 NeedsCompilation: yes
 
 Package: rutabaga
@@ -53,7 +53,7 @@ Depends: R (>= 3.5)
 Imports: utils, assertthat, stats, grDevices, graphics, methods, future, magrittr, crayon
           (>= 1.3.4), rlang (>= 0.3.0), stringr (>= 1.3.1), digest, dipsaus
 License: GPL-3
-MD5sum: 5cb5e794ff645f2c9b62b1e740ca4ada
+MD5sum: 335a0a77edd44aa16f3f29729671989c
 NeedsCompilation: no
 
 Package: threeBrain
@@ -65,5 +65,5 @@ Imports: grDevices, graphics, dipsaus, shiny (>= 1.2.0), digest (>= 0.6.22),
           (>= 0.9.1)
 Suggests: knitr, rmarkdown, pryr,
 License: GPL-3
-MD5sum: 6a30c91b83fe62ff9a4911d3e1a7d1b4
+MD5sum: b3aa8d2ff4b4a4b8c9a996bd2e7f0584
 NeedsCompilation: no

@@ -1,14 +1,14 @@
 Package: dipsaus
-Version: 0.0.5.1
+Version: 0.0.6
 Depends: R (>= 3.5.0)
 Imports: utils, grDevices, shiny, cli, stringr, parallel, jsonlite (>= 1.6), future,
           future.apply, progressr, Rcpp, RcppParallel, crayon, fastmap, base64url,
-          base64enc, txtq, synchronicity, digest, R6, rlang (>= 0.4.0)
+          base64enc, txtq, synchronicity, digest, R6, rlang (>= 0.4.0), startup
 LinkingTo: Rcpp, RcppParallel
 Suggests: microbenchmark, knitr, rmarkdown, testthat, promises, magrittr, glue, qs,
           RcppRedis, future.callr
 License: GPL-3
-MD5sum: 1ed6c53a957c5f63b8f575bbd58b7119
+MD5sum: 70b333b539c167e9bb3c673010deeb50
 
 Package: rave
 Version: 1.0.0
@@ -23,7 +23,7 @@ Imports: utils, stats, graphics, grDevices, glue, remotes, htmltools (>= 0.3.6),
           data.table (>= 1.11.8), pryr (>= 0.1.3), shinyFiles (>= 0.7.3)
 Suggests: knitr, rmarkdown, spelling, roxygen2, testthat, rstudioapi
 License: GPL-3
-MD5sum: 3bab3a7cdabb05259830a3d0e11d5541
+MD5sum: d3aa02fbb866cdaf8ad6f1b0f4f7d8bd
 
 Package: ravebuiltins
 Version: 0.1.1
@@ -34,14 +34,14 @@ Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus,
           DT, fst, htmltools, rave, rutabaga
 Suggests: devtools, rstudioapi (>= 0.9.0)
 License: MIT + file LICENSE
-MD5sum: 5cc8dd345602efd2cc33421432d82c64
+MD5sum: d4f934667ad62c0eb86c79256df8b101
 
 Package: Rcpp
-Version: 1.0.4.5
+Version: 1.0.4.6
 Imports: methods, utils
 Suggests: tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)
 License: GPL (>= 2)
-MD5sum: 6ee5488f9dd9d0ef2573bfdec3de99d0
+MD5sum: ce93f8ed93855d167685319af24f7a5f
 
 Package: rutabaga
 Version: 0.1.7
@@ -49,7 +49,7 @@ Depends: R (>= 3.5)
 Imports: utils, assertthat, stats, grDevices, graphics, methods, future, magrittr, crayon
           (>= 1.3.4), rlang (>= 0.3.0), stringr (>= 1.3.1), digest, dipsaus
 License: GPL-3
-MD5sum: cd5dfc4b27022bb0c82ab08a1d3c121b
+MD5sum: 3af7673895c543ad4c2737f0ec5ba39e
 
 Package: threeBrain
 Version: 0.1.6
@@ -60,4 +60,4 @@ Imports: grDevices, graphics, dipsaus, shiny (>= 1.2.0), digest (>= 0.6.22),
           (>= 0.9.1)
 Suggests: knitr, rmarkdown, pryr,
 License: GPL-3
-MD5sum: f5295bb292c36b06cada3951f874a5e2
+MD5sum: f80cf6ad37904e6c09ac0f3c4b369521

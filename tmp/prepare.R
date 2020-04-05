@@ -14,18 +14,25 @@ source_path <- 'tmp/source/'
 github_path <- 'tmp/source/github'
 download_path <- 'tmp/downloads'
 binary_path <- file.path(proj_dir, 'tmp', os)
+unlink(source_path, recursive = TRUE)
+unlink(binary_path, recursive = TRUE)
 dir.create(binary_path, recursive = TRUE, showWarnings = FALSE)
 dir.create(github_path, recursive = TRUE, showWarnings = FALSE)
 unlink(download_path, recursive = TRUE)
 dir.create(download_path, recursive = TRUE, showWarnings = FALSE)
-dir.create(file.path(proj_dir, 'bin', os, 'contrib', rver), recursive = TRUE, showWarnings = FALSE)
 
+# Remove all source packages
+unlink('src/contrib/', recursive = TRUE)
+dir.create('src/contrib/', recursive = TRUE, showWarnings = FALSE)
+binary_target <- file.path(proj_dir, 'bin', os, 'contrib', rver)
+unlink(binary_target, recursive = TRUE)
+dir.create(binary_target, recursive = TRUE, showWarnings = FALSE)
 
 
 dependencies <- list(
   'Rcpp' = list(
     url = 'https://github.com/RcppCore/drat/raw/gh-pages/src/contrib/',
-    name = 'Rcpp_1.0.4.5.tar.gz',
+    name = 'Rcpp_1.0.4.6.tar.gz',
     type = 'source'
   ),
   'dipsaus' = list(
