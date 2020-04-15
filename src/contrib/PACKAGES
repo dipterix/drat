@@ -25,7 +25,7 @@ Imports: utils, stats, graphics, grDevices, glue, remotes, htmltools (>= 0.3.6),
          shinyFiles (>= 0.7.3)
 Suggests: knitr, rmarkdown, spelling, roxygen2, testthat, rstudioapi
 License: GPL-3
-MD5sum: 189d22f17bf91780ce1ff4c5f578dc17
+MD5sum: 551ead9122dd136cfbc1a384c8aca905
 NeedsCompilation: no
 
 Package: ravebuiltins
