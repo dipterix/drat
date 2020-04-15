@@ -2,11 +2,11 @@ Package: dipsaus
 Version: 0.0.6
 Depends: R (>= 3.5.0)
 Imports: utils, grDevices, shiny, cli, stringr, parallel, jsonlite (>= 1.6), future,
-          future.apply, progressr, Rcpp, RcppParallel, crayon, fastmap, base64url,
-          base64enc, txtq, synchronicity, digest, R6, rlang (>= 0.4.0), startup
+         future.apply, progressr, Rcpp, RcppParallel, crayon, fastmap, base64url,
+         base64enc, txtq, synchronicity, digest, R6, rlang (>= 0.4.0), startup
 LinkingTo: Rcpp, RcppParallel
 Suggests: microbenchmark, knitr, rmarkdown, testthat, promises, magrittr, glue, qs,
-          RcppRedis, future.callr
+         RcppRedis, future.callr
 License: GPL-3
 MD5sum: 09360afedd80e89708ed556d62ce6ab1
 NeedsCompilation: yes
@@ -15,25 +15,26 @@ Package: rave
 Version: 1.0.0
 Depends: R (>= 3.6.0)
 Imports: utils, stats, graphics, grDevices, glue, remotes, htmltools (>= 0.3.6),
-          devtools, grid, crayon, cli, fastmap (>= 1.0.1), signal (>= 0.7-6), dipsaus (>=
-          0.0.3), hdf5r (>= 1.0.0), R.matlab (>= 3.6.1), R6 (>= 2.2.2), jsonlite (>=
-          1.5), future (>= 1.10.0), shiny (>= 1.0.5), stringr (>= 1.2.0), yaml (>=
-          2.1.15), shinydashboard (>= 0.6.0), fftwtools (>= 0.9-7), digest (>= 0.6.13),
-          shinyjs (>= 1.0), rlang (>= 0.1.6.9000), DT (>= 0.4), reticulate (>= 1.6), fst
-          (>= 0.8.8), servr (>= 0.13), later (>= 0.8.0), startup (>= 0.12.0), threeBrain
-          (>= 0.1.4), data.table (>= 1.11.8), pryr (>= 0.1.3), shinyFiles (>= 0.7.3)
+         devtools, grid, crayon, cli, fastmap (>= 1.0.1), signal (>= 0.7-6), dipsaus
+         (>= 0.0.6), hdf5r (>= 1.0.0), R.matlab (>= 3.6.1), R6 (>= 2.2.2), jsonlite
+         (>= 1.5), future (>= 1.10.0), shiny (>= 1.0.5), stringr (>= 1.2.0), yaml
+         (>= 2.1.15), shinydashboard (>= 0.6.0), fftwtools (>= 0.9-7), digest (>=
+         0.6.13), shinyjs (>= 1.0), rlang (>= 0.1.6.9000), DT (>= 0.4), reticulate
+         (>= 1.6), fst (>= 0.8.8), servr (>= 0.13), later (>= 0.8.0), startup (>=
+         0.12.0), threeBrain (>= 0.1.4), data.table (>= 1.11.8), pryr (>= 0.1.3),
+         shinyFiles (>= 0.7.3)
 Suggests: knitr, rmarkdown, spelling, roxygen2, testthat, rstudioapi
 License: GPL-3
-MD5sum: 6fb2ba2bb7779f83cf8096a973a57cc4
+MD5sum: 41448bea13d617977a360a91b36da5eb
 NeedsCompilation: no
 
 Package: ravebuiltins
 Version: 0.1.1
-Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus, yaml (>=
-          2.2.0), shiny (>= 1.2.0), rlang (>= 0.3.0), stringr (>= 1.3.1), threeBrain (>=
-          0.1.3), future (>= 0.14.0), magrittr (>= 1.5), circular (>= 0.4-93), lmerTest
-          (>= 3.1-0), lsmeans, knitr, assertthat, shinyjs, shinyFiles, reshape2, digest,
-          DT, fst, htmltools, rave, rutabaga
+Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus, yaml
+         (>= 2.2.0), shiny (>= 1.2.0), rlang (>= 0.3.0), stringr (>= 1.3.1),
+         threeBrain (>= 0.1.3), future (>= 0.14.0), magrittr (>= 1.5), circular (>=
+         0.4-93), lmerTest (>= 3.1-0), lsmeans, knitr, assertthat, shinyjs,
+         shinyFiles, reshape2, digest, DT, fst, htmltools, rave, rutabaga
 Suggests: devtools, rstudioapi (>= 0.9.0)
 License: MIT + file LICENSE
 MD5sum: efd3b198b57563e9c246adf1f5ceaa93
@@ -50,8 +51,8 @@ NeedsCompilation: yes
 Package: rutabaga
 Version: 0.1.7
 Depends: R (>= 3.5)
-Imports: utils, assertthat, stats, grDevices, graphics, methods, future, magrittr, crayon
-          (>= 1.3.4), rlang (>= 0.3.0), stringr (>= 1.3.1), digest, dipsaus
+Imports: utils, assertthat, stats, grDevices, graphics, methods, future, magrittr,
+         crayon (>= 1.3.4), rlang (>= 0.3.0), stringr (>= 1.3.1), digest, dipsaus
 License: GPL-3
 MD5sum: 200d92e6e5f33c558532fc536f20f139
 NeedsCompilation: no
@@ -59,10 +60,10 @@ NeedsCompilation: no
 Package: threeBrain
 Version: 0.1.6
 Imports: grDevices, graphics, dipsaus, shiny (>= 1.2.0), digest (>= 0.6.22),
-          freesurferformats (>= 0.1.7), crayon (>= 1.3.4), base64enc (>= 0.1-3),
-          htmltools (>= 0.3.6), jsonlite (>= 1.5), stringr (>= 1.3.1), htmlwidgets (>=
-          1.3), R6 (>= 2.3.0), startup (>= 0.12.0), reticulate (>= 1.13), gifti (>=
-          0.7.5), oro.nifti (>= 0.9.1)
+         freesurferformats (>= 0.1.7), crayon (>= 1.3.4), base64enc (>= 0.1-3),
+         htmltools (>= 0.3.6), jsonlite (>= 1.5), stringr (>= 1.3.1), htmlwidgets
+         (>= 1.3), R6 (>= 2.3.0), startup (>= 0.12.0), reticulate (>= 1.13), gifti
+         (>= 0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown, pryr,
 License: GPL-3
 MD5sum: fa4c47972d0e2e5c606a2954be010081
