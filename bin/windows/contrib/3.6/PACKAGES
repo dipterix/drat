@@ -15,7 +15,7 @@ Version: 1.0.0
 Depends: R (>= 3.6.0)
 Imports: utils, stats, graphics, grDevices, glue, remotes, htmltools (>= 0.3.6),
           devtools, grid, crayon, cli, fastmap (>= 1.0.1), signal (>= 0.7-6), dipsaus (>=
-          0.0.3), hdf5r (>= 1.0.0), R.matlab (>= 3.6.1), R6 (>= 2.2.2), jsonlite (>=
+          0.0.6), hdf5r (>= 1.0.0), R.matlab (>= 3.6.1), R6 (>= 2.2.2), jsonlite (>=
           1.5), future (>= 1.10.0), shiny (>= 1.0.5), stringr (>= 1.2.0), yaml (>=
           2.1.15), shinydashboard (>= 0.6.0), fftwtools (>= 0.9-7), digest (>= 0.6.13),
           shinyjs (>= 1.0), rlang (>= 0.1.6.9000), DT (>= 0.4), reticulate (>= 1.6), fst
