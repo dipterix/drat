@@ -8,7 +8,7 @@ LinkingTo: Rcpp, RcppParallel
 Suggests: microbenchmark, knitr, rmarkdown, testthat, promises, magrittr, glue, qs, txtq,
            RcppRedis, future.callr
 License: GPL-3
-MD5sum: 558ca598a48d3e7e7564d70d120e1179
+MD5sum: bfaa356efeac9d087bd9bd7887955f71
 
 Package: rave
 Version: 1.0.0
@@ -23,7 +23,7 @@ Imports: utils, stats, graphics, grDevices, glue, remotes, htmltools (>= 0.3.6),
            shinyFiles (>= 0.7.3)
 Suggests: knitr, rmarkdown, spelling, roxygen2, testthat, rstudioapi
 License: GPL-3
-MD5sum: 9cd8c4f286e791b563e07a959a913028
+MD5sum: 20e8b6d7abca9c23e50794aaba63386c
 
 Package: ravebuiltins
 Version: 0.1.1
@@ -34,14 +34,14 @@ Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus,
            rutabaga
 Suggests: devtools, rstudioapi (>= 0.9.0)
 License: MIT + file LICENSE
-MD5sum: 777c62f79f84a1f194f30367bab46bba
+MD5sum: 794a576e33193254cb828044f3cd2660
 
 Package: Rcpp
 Version: 1.0.4.8
 Imports: methods, utils
 Suggests: tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)
 License: GPL (>= 2)
-MD5sum: 4ab2afca06112b45becbe2f54a28aaa9
+MD5sum: 0b065d622de6904296f752cbe7613fc9
 
 Package: rutabaga
 Version: 0.1.7
@@ -49,7 +49,7 @@ Depends: R (>= 3.5)
 Imports: utils, assertthat, stats, grDevices, graphics, methods, future, magrittr, crayon (>=
            1.3.4), rlang (>= 0.3.0), stringr (>= 1.3.1), digest, dipsaus
 License: GPL-3
-MD5sum: d6bf5e5b83de1cf0c1607b23e1ee15d3
+MD5sum: d9a2814e4d4f5712bdc58ef05b87d419
 
 Package: threeBrain
 Version: 0.1.6
@@ -59,4 +59,4 @@ Imports: grDevices, graphics, dipsaus, shiny (>= 1.2.0), digest (>= 0.6.22), fre
            reticulate (>= 1.13), gifti (>= 0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown, pryr,
 License: GPL-3
-MD5sum: 27c39f4dab4184ec231a9877ea34f6cb
+MD5sum: 173c6b63ceafdad8192f0d1b4e521b60
