@@ -32,7 +32,7 @@ dir.create(binary_target, recursive = TRUE, showWarnings = FALSE)
 dependencies <- list(
   'Rcpp' = list(
     url = 'https://github.com/RcppCore/drat/raw/gh-pages/src/contrib/',
-    name = 'Rcpp_1.0.4.6.tar.gz',
+    name = 'Rcpp_1.0.4.8.tar.gz',
     type = 'source'
   ),
   'dipsaus' = list(
