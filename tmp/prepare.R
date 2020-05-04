@@ -22,10 +22,10 @@ unlink(download_path, recursive = TRUE)
 dir.create(download_path, recursive = TRUE, showWarnings = FALSE)
 
 # Remove all source packages
-unlink('src/contrib/', recursive = TRUE)
+# unlink('src/contrib/', recursive = TRUE)
 dir.create('src/contrib/', recursive = TRUE, showWarnings = FALSE)
 binary_target <- file.path(proj_dir, 'bin', os, 'contrib', rver)
-unlink(binary_target, recursive = TRUE)
+# unlink(binary_target, recursive = TRUE)
 dir.create(binary_target, recursive = TRUE, showWarnings = FALSE)
 
 
@@ -53,6 +53,10 @@ dependencies <- list(
   ),
   'rave' = list(
     url = 'https://github.com/beauchamplab/rave/archive/dev-1.0.zip',
+    type = 'github'
+  ),
+  'fstcore' = list(
+    url = 'https://github.com/fstpackage/fstcore/archive/master.zip',
     type = 'github'
   )
 )

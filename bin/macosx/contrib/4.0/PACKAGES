@@ -1,0 +1,28 @@
+Package: dipsaus
+Version: 0.0.6.2
+Depends: R (>= 3.5.0)
+Imports: utils, grDevices, shiny, cli, stringr, parallel, jsonlite (>=
+        1.6), future, future.apply, progressr, Rcpp, RcppParallel,
+        crayon, fastmap, base64url, base64enc, synchronicity, digest,
+        R6, rlang (>= 0.4.0), startup
+LinkingTo: Rcpp, RcppParallel
+Suggests: microbenchmark, knitr, rmarkdown, testthat, promises,
+        magrittr, glue, qs, txtq, RcppRedis, future.callr
+License: GPL-3
+MD5sum: 81404743585c4b115eae9f397b0c2f72
+
+Package: fstcore
+Version: 0.9.4
+Depends: R (>= 3.0.0)
+Imports: Rcpp
+LinkingTo: Rcpp
+Suggests: testthat, lintr
+License: AGPL-3
+MD5sum: 84050e07c21dd87a00fb23fd5a3c2f34
+
+Package: Rcpp
+Version: 1.0.4.8
+Imports: methods, utils
+Suggests: tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)
+License: GPL (>= 2)
+MD5sum: 4e1cd7b5a0e664e639c6759349074d48
