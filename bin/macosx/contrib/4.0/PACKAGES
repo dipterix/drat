@@ -1,15 +1,24 @@
 Package: dipsaus
 Version: 0.0.6.2
 Depends: R (>= 3.5.0)
-Imports: utils, grDevices, shiny, cli, stringr, parallel, jsonlite (>=
-        1.6), future, future.apply, progressr, Rcpp, RcppParallel,
-        crayon, fastmap, base64url, base64enc, synchronicity, digest,
-        R6, rlang (>= 0.4.0), startup
+Imports: utils, grDevices, shiny, cli, stringr, parallel, jsonlite (>= 1.6),
+         future, future.apply, progressr, Rcpp, RcppParallel, crayon, fastmap,
+         base64url, base64enc, synchronicity, digest, R6, rlang (>= 0.4.0),
+         startup
 LinkingTo: Rcpp, RcppParallel
-Suggests: microbenchmark, knitr, rmarkdown, testthat, promises,
-        magrittr, glue, qs, txtq, RcppRedis, future.callr
+Suggests: microbenchmark, knitr, rmarkdown, testthat, promises, magrittr, glue,
+         qs, RcppRedis, future.callr
 License: GPL-3
-MD5sum: 81404743585c4b115eae9f397b0c2f72
+MD5sum: d9621866893c3ec9513d42bd464cca2f
+
+Package: fst
+Version: 0.9.2
+Depends: R (>= 3.0.0)
+Imports: Rcpp
+LinkingTo: Rcpp
+Suggests: testthat, bit64, data.table, lintr, nanotime, crayon
+License: AGPL-3 | file LICENSE
+MD5sum: 5197077092e0c747a03f9cb2b3338761
 
 Package: fstcore
 Version: 0.9.4
@@ -18,11 +27,11 @@ Imports: Rcpp
 LinkingTo: Rcpp
 Suggests: testthat, lintr
 License: AGPL-3
-MD5sum: 84050e07c21dd87a00fb23fd5a3c2f34
+MD5sum: be64addfa42cb247ee3d092b904968e3
 
 Package: Rcpp
-Version: 1.0.4.8
+Version: 1.0.4.9
 Imports: methods, utils
 Suggests: tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)
 License: GPL (>= 2)
-MD5sum: 4e1cd7b5a0e664e639c6759349074d48
+MD5sum: f5da52b4e19e99e30e32605a03e83a2a

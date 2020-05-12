@@ -32,7 +32,7 @@ dir.create(binary_target, recursive = TRUE, showWarnings = FALSE)
 dependencies <- list(
   'Rcpp' = list(
     url = 'https://github.com/RcppCore/drat/raw/gh-pages/src/contrib/',
-    name = 'Rcpp_1.0.4.8.tar.gz',
+    name = 'Rcpp_1.0.4.9.tar.gz',
     type = 'source'
   ),
   'dipsaus' = list(
@@ -52,11 +52,15 @@ dependencies <- list(
     type = 'github'
   ),
   'rave' = list(
-    url = 'https://github.com/beauchamplab/rave/archive/dev-1.0.zip',
+    url = 'https://github.com/beauchamplab/rave/archive/dev-1.1.zip',
     type = 'github'
   ),
   'fstcore' = list(
     url = 'https://github.com/fstpackage/fstcore/archive/master.zip',
+    type = 'github'
+  ),
+  'fst' = list(
+    url = 'https://github.com/fstpackage/fst/archive/master.zip',
     type = 'github'
   )
 )
@@ -119,7 +123,7 @@ for(destfile in binary_packages){
 
 
 # CRAN packages
-cran_packages <- c("abind", "askpass", "assertthat", "backports", "base64enc", "base64url", "BH", "bigmemory.sri", "bit", "bit64", "bitops", "boot", "brew", "callr", "car", "carData", "cellranger", "circular", "class", "cli", "clipr", "clisymbols", "cluster", "codetools", "colorspace", "commonmark", "covr", "crayon", "crosstalk", "curl", "data.table", "desc", "devtools", "digest", "downloader", "DT", "ellipsis", "emmeans", "estimability",  "evaluate", "fansi", "farver", "fastmap", "fftwtools", "filelock", "forcats", "foreign", "freesurferformats", "fs", "fst", "future", "future.apply", "future.callr", "ggplot2", "gh", "gifti", "git2r", "globals", "glue", "grid", "gtable", "haven", "hdf5r", "highr", "hms", "htmltools", "htmlwidgets", "httpuv", "httr", "ini", "isoband", "jsonlite", "KernSmooth", "knitr", "labeling", "later", "lattice", "lazyeval", "lifecycle", "listenv", "lme4", "lmerTest", "lsmeans", "magrittr",  "maptools", "markdown", "Matrix", "MatrixModels", "memoise", "mgcv", "microbenchmark", "mime", "minqa", "munsell", "nlme", "nloptr", "nnet", "numDeriv", "openssl", "openxlsx", "oro.nifti", "pbkrtest", "pillar", "pkgbuild", "pkgconfig", "pkgfilecache", "pkgload", "plyr", "praise", "prettyunits", "processx", "progress", "progressr", "promises", "pryr", "ps", "purrr", "qs", "R.matlab", "R.methodsS3", "R.oo", "R.utils", "R6", "RApiSerialize", "rappdirs", "rcmdcheck",  "RColorBrewer", "RcppEigen", "RcppParallel", "RcppRedis", "readr", "readxl", "rematch", "remotes", "reshape2", "reticulate", "rex", "rio", "rlang", "rmarkdown", "RNifti", "roxygen2", "rpart", "rprojroot", "rstudioapi", "rversions", "scales", "servr", "sessioninfo", "shiny", "shinydashboard", "shinyFiles", "shinyjs", "signal", "sourcetools", "sp", "SparseM", "spatial", "startup", "stringi", "stringr", "survival", "synchronicity", "sys", "testthat", "tibble", "tidyselect", "tinytex", "txtq", "usethis", "utf8", "uuid", "vctrs", "viridisLite", "whisker", "withr", "xfun", "xml2", "xopen", "xtable", "yaml", "zip")
+cran_packages <- c("abind", "askpass", "assertthat", "backports", "base64enc", "base64url", "BH", "bigmemory.sri", "bit", "bit64", "bitops", "boot", "brew", "callr", "car", "carData", "cellranger", "circular", "class", "cli", "clipr", "clisymbols", "cluster", "codetools", "colorspace", "commonmark", "covr", "crayon", "crosstalk", "curl", "data.table", "desc", "devtools", "digest", "downloader", "DT", "ellipsis", "emmeans", "estimability",  "evaluate", "fansi", "farver", "fastmap", "fftwtools", "filelock", "forcats", "foreign", "freesurferformats", "fs", "future", "future.apply", "future.callr", "ggplot2", "gh", "gifti", "git2r", "globals", "glue", "grid", "gtable", "haven", "hdf5r", "highr", "hms", "htmltools", "htmlwidgets", "httpuv", "httr", "ini", "isoband", "jsonlite", "KernSmooth", "knitr", "labeling", "later", "lattice", "lazyeval", "lifecycle", "listenv", "lme4", "lmerTest", "lsmeans", "magrittr",  "maptools", "markdown", "Matrix", "MatrixModels", "memoise", "mgcv", "microbenchmark", "mime", "minqa", "munsell", "nlme", "nloptr", "nnet", "numDeriv", "openssl", "openxlsx", "oro.nifti", "pbkrtest", "pillar", "pkgbuild", "pkgconfig", "pkgfilecache", "pkgload", "plyr", "praise", "prettyunits", "processx", "progress", "progressr", "promises", "pryr", "ps", "purrr", "qs", "R.matlab", "R.methodsS3", "R.oo", "R.utils", "R6", "RApiSerialize", "rappdirs", "rcmdcheck",  "RColorBrewer", "RcppEigen", "RcppParallel", "RcppRedis", "readr", "readxl", "rematch", "remotes", "reshape2", "reticulate", "rex", "rio", "rlang", "rmarkdown", "RNifti", "roxygen2", "rpart", "rprojroot", "rstudioapi", "rversions", "scales", "servr", "sessioninfo", "shiny", "shinydashboard", "shinyFiles", "shinyjs", "signal", "sourcetools", "sp", "SparseM", "spatial", "startup", "stringi", "stringr", "survival", "synchronicity", "sys", "testthat", "tibble", "tidyselect", "tinytex", "txtq", "usethis", "utf8", "uuid", "vctrs", "viridisLite", "whisker", "withr", "xfun", "xml2", "xopen", "xtable", "yaml", "zip")
 
 
 
