@@ -1,15 +1,14 @@
 Package: dipsaus
-Version: 0.0.6.2
+Version: 0.0.7
 Depends: R (>= 3.5.0)
-Imports: utils, grDevices, shiny, cli, stringr, parallel, jsonlite (>= 1.6),
-         future, future.apply, progressr, Rcpp, RcppParallel, crayon, fastmap,
-         base64url, base64enc, synchronicity, digest, R6, rlang (>= 0.4.0),
-         startup
+Imports: utils, grDevices, parallel, Rcpp, RcppParallel, R6, shiny, cli, stringr,
+         jsonlite (>= 1.6), future, future.apply, progressr, crayon, fastmap,
+         base64url, base64enc, synchronicity, digest, rlang (>= 0.4.0), startup
 LinkingTo: Rcpp, RcppParallel
 Suggests: microbenchmark, knitr, rmarkdown, testthat, promises, magrittr, glue,
          qs, RcppRedis, future.callr
 License: GPL-3
-MD5sum: 188403bff933b734781f9c65be8adcc5
+MD5sum: bde4423c890d4afa61364af41c5203fb
 NeedsCompilation: yes
 
 Package: fst
@@ -19,7 +18,7 @@ Imports: Rcpp
 LinkingTo: Rcpp
 Suggests: testthat, bit64, data.table, lintr, nanotime, crayon
 License: AGPL-3 | file LICENSE
-MD5sum: 4ac5119c7d6947107cf8b82be9460c0b
+MD5sum: 9dbd958c571e67f1f2a791cb2c050ee6
 NeedsCompilation: yes
 
 Package: fstcore
@@ -29,7 +28,7 @@ Imports: Rcpp
 LinkingTo: Rcpp
 Suggests: testthat, lintr
 License: AGPL-3
-MD5sum: 3294d47c85677d2558c0cace700bab33
+MD5sum: 5923892ed0fe1e9e0e360b46cfe0b510
 NeedsCompilation: yes
 
 Package: rave
@@ -45,7 +44,7 @@ Imports: utils, stats, graphics, grDevices, glue, crayon, cli, htmltools (>=
          0.1.4), data.table (>= 1.11.8), pryr (>= 0.1.3), shinyFiles (>= 0.7.3)
 Suggests: knitr, rmarkdown, spelling, roxygen2, testthat, rstudioapi
 License: GPL-3
-MD5sum: 75f16c540fbb25c1e23b47c0422b9b9c
+MD5sum: 24a1c9089a6f92e71b3762497432ec52
 NeedsCompilation: no
 
 Package: ravebuiltins
@@ -57,7 +56,7 @@ Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus,
          shinyFiles, reshape2, digest, DT, fst, htmltools, rave, rutabaga
 Suggests: devtools, rstudioapi (>= 0.9.0)
 License: MIT + file LICENSE
-MD5sum: be8edb8f0fa355e89ca2b6c48cb87c61
+MD5sum: c6cd9dc423a9b47db45f22d4b80cd00b
 NeedsCompilation: no
 
 Package: Rcpp
@@ -75,7 +74,7 @@ Imports: utils, assertthat, stats, grDevices, graphics, methods, future,
          magrittr, crayon (>= 1.3.4), rlang (>= 0.3.0), stringr (>= 1.3.1),
          digest, dipsaus
 License: GPL-3
-MD5sum: 4335bcfc81c043195f52a37ad5cba664
+MD5sum: 7fb814e417d4e431a002cd501a59bcb3
 NeedsCompilation: no
 
 Package: threeBrain
@@ -86,5 +85,5 @@ Imports: grDevices, graphics, dipsaus, shiny (>= 1.2.0), digest (>= 0.6.22),
          (>= 1.3), R6 (>= 2.3.0), gifti (>= 0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown, pryr,
 License: GPL-3
-MD5sum: b6dfe8e621577cd9325f6c6240e01576
+MD5sum: ac4736e62d01eb5af96ae8960296a3a2
 NeedsCompilation: no
