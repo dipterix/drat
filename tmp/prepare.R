@@ -126,12 +126,12 @@ for(f in fs){
   file.copy(file.path(fdir, f), file.path(binary_target, f), overwrite = TRUE, copy.mode = TRUE, copy.date = TRUE)
 }
 
-fdir <- './src/contrib/'
+fdir <- './bin/macosx/mac.binary/contrib/4.0/'
+# dir.create('./bin/macosx/contrib/4.0/', recursive = TRUE)
 fs <- list.files(fdir, full.names = FALSE, recursive = FALSE)
 for(f in fs){
-  file.copy(file.path(fdir, f), file.path(binary_target, f), overwrite = TRUE, copy.mode = TRUE, copy.date = TRUE)
+  file.copy(file.path(fdir, f), file.path('./bin/macosx/contrib/4.0/', f), overwrite = TRUE, copy.mode = TRUE, copy.date = TRUE)
 }
-
 
 
 # WARNING: Will download all dependent packages
