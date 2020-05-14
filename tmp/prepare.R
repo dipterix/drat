@@ -1,5 +1,6 @@
 # Script to add packages
 os <- 'macosx/el-capitan'
+# https://cran.rstudio.com/src/contrib
 rinfo <- R.Version()
 major <- rinfo$major
 minor <- strsplit(rinfo$minor, '\\.')[[1]][[1]]
@@ -117,6 +118,20 @@ for(destfile in binary_packages){
   print(destfile)
   drat::insertPackage(destfile)
 }
+
+# somehow it's installed to mac.binary/contrib, need to copy to el-capitan
+fdir <- './bin/macosx/mac.binary/contrib/4.0/'
+fs <- list.files(fdir, full.names = FALSE, recursive = FALSE)
+for(f in fs){
+  file.copy(file.path(fdir, f), file.path(binary_target, f), overwrite = TRUE, copy.mode = TRUE, copy.date = TRUE)
+}
+
+fdir <- './src/contrib/'
+fs <- list.files(fdir, full.names = FALSE, recursive = FALSE)
+for(f in fs){
+  file.copy(file.path(fdir, f), file.path(binary_target, f), overwrite = TRUE, copy.mode = TRUE, copy.date = TRUE)
+}
+
 
 
 # WARNING: Will download all dependent packages
