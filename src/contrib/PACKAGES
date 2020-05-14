@@ -8,7 +8,7 @@ LinkingTo: Rcpp, RcppParallel
 Suggests: microbenchmark, knitr, rmarkdown, testthat, promises, magrittr, glue,
          qs, RcppRedis, future.callr
 License: GPL-3
-MD5sum: 70015a8612d5ee1f86de354c8429278b
+MD5sum: 04d64846402f5211db5d79f813777c60
 NeedsCompilation: yes
 
 Package: fst
@@ -18,7 +18,7 @@ Imports: Rcpp
 LinkingTo: Rcpp
 Suggests: testthat, bit64, data.table, lintr, nanotime, crayon
 License: AGPL-3 | file LICENSE
-MD5sum: 562a464edf66d751c44b0336b1894e24
+MD5sum: ff554460838b5776f4fc6cc23c32ca45
 NeedsCompilation: yes
 
 Package: fstcore
@@ -28,7 +28,7 @@ Imports: Rcpp
 LinkingTo: Rcpp
 Suggests: testthat, lintr
 License: AGPL-3
-MD5sum: 47ae08ced392a0abe4be87ce7969ef02
+MD5sum: cc030c554d551de195bc36d64989c301
 NeedsCompilation: yes
 
 Package: rave
@@ -44,7 +44,7 @@ Imports: utils, stats, graphics, grDevices, glue, crayon, cli, htmltools (>=
          0.1.4), data.table (>= 1.11.8), pryr (>= 0.1.3), shinyFiles (>= 0.7.3)
 Suggests: knitr, rmarkdown, spelling, roxygen2, testthat, rstudioapi
 License: GPL-3
-MD5sum: c453aaf74e9d73d2eff4a5f9bb073a22
+MD5sum: c72efe4a53025bb49e523865f40bc3d0
 NeedsCompilation: no
 
 Package: ravebuiltins
@@ -56,7 +56,7 @@ Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus,
          shinyFiles, reshape2, digest, DT, fst, htmltools, rave, rutabaga
 Suggests: devtools, rstudioapi (>= 0.9.0)
 License: MIT + file LICENSE
-MD5sum: c123f78f2904f5cf3ccaac830524b453
+MD5sum: c8165688e39ff4592d87644035e71f13
 NeedsCompilation: no
 
 Package: Rcpp
@@ -74,7 +74,7 @@ Imports: utils, assertthat, stats, grDevices, graphics, methods, future,
          magrittr, crayon (>= 1.3.4), rlang (>= 0.3.0), stringr (>= 1.3.1),
          digest, dipsaus
 License: GPL-3
-MD5sum: b4d215ea9fe957deec8116f301fcaeef
+MD5sum: b57c2163ba9d7530581616062a60c86b
 NeedsCompilation: no
 
 Package: threeBrain
@@ -85,5 +85,5 @@ Imports: grDevices, graphics, dipsaus, shiny (>= 1.2.0), digest (>= 0.6.22),
          (>= 1.3), R6 (>= 2.3.0), gifti (>= 0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown, pryr,
 License: GPL-3
-MD5sum: b339163160774dfb79b5fc9c0545c191
+MD5sum: 2f111dbc462289c63994635bbba04701
 NeedsCompilation: no
