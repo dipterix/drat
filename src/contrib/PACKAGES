@@ -8,7 +8,7 @@ LinkingTo: Rcpp, RcppParallel
 Suggests: microbenchmark, htmltools, knitr, rmarkdown, testthat, promises,
          magrittr, glue, qs, RcppRedis, future.callr
 License: GPL-3
-MD5sum: 501337eb95f6db1f6bb78756b8e98f29
+MD5sum: b7b89598025d8faa006521e24f1319b1
 NeedsCompilation: yes
 
 Package: fst
@@ -18,7 +18,7 @@ Imports: Rcpp
 LinkingTo: Rcpp
 Suggests: testthat, bit64, data.table, lintr, nanotime, crayon
 License: AGPL-3 | file LICENSE
-MD5sum: ae466feba08905473081383348b3ebe4
+MD5sum: c984464da6b2f6f8f38a85ff1f5c43ce
 NeedsCompilation: yes
 
 Package: fstcore
@@ -28,7 +28,7 @@ Imports: Rcpp
 LinkingTo: Rcpp
 Suggests: testthat, lintr
 License: AGPL-3
-MD5sum: 35f9cb5f9a18c92867cc3a817c2c919a
+MD5sum: a5f261d67efd5a4ef4f63eb8fb98fa77
 NeedsCompilation: yes
 
 Package: rave
@@ -44,7 +44,7 @@ Imports: utils, stats, graphics, grDevices, glue, crayon, cli, htmltools (>=
          0.1.4), data.table (>= 1.11.8), pryr (>= 0.1.3), shinyFiles (>= 0.7.3)
 Suggests: knitr, rmarkdown, spelling, roxygen2, testthat, rstudioapi
 License: GPL-3
-MD5sum: 1a7a9191b322fe576269177b5b2a253f
+MD5sum: 39aff5135513aad11f508c461307063b
 NeedsCompilation: no
 
 Package: ravebuiltins
@@ -56,7 +56,7 @@ Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus,
          shinyFiles, reshape2, digest, DT, fst, htmltools, rave, rutabaga
 Suggests: devtools, rstudioapi (>= 0.9.0)
 License: MIT + file LICENSE
-MD5sum: 459c78cb3de075aa8ffd21d8f76a38a3
+MD5sum: 95f790772bb0fbe61811b82f9e26df72
 NeedsCompilation: no
 
 Package: Rcpp
@@ -74,7 +74,7 @@ Imports: utils, assertthat, stats, grDevices, graphics, methods, future,
          magrittr, crayon (>= 1.3.4), rlang (>= 0.3.0), stringr (>= 1.3.1),
          digest, dipsaus
 License: GPL-3
-MD5sum: 3f89e5ac8d90140595ebe44bc752c095
+MD5sum: 580d5ee579c97263cacc0cee29bc2808
 NeedsCompilation: no
 
 Package: threeBrain
@@ -85,5 +85,5 @@ Imports: grDevices, graphics, dipsaus, shiny (>= 1.2.0), digest (>= 0.6.22),
          (>= 1.3), R6 (>= 2.3.0), gifti (>= 0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown, pryr,
 License: GPL-3
-MD5sum: 84d871f0e069969e05598f9565db406c
+MD5sum: d710c5cbb7ef7560fcddd293f4be5c1b
 NeedsCompilation: no
