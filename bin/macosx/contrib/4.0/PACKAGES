@@ -1,3 +1,33 @@
+Package: dipsaus
+Version: 0.0.7.1
+Depends: R (>= 3.5.0)
+Imports: utils, grDevices, parallel, Rcpp, RcppParallel, R6, shiny, cli, stringr,
+         jsonlite (>= 1.6), future, future.apply, progressr, fastmap, base64url,
+         base64enc, synchronicity, digest, rlang (>= 0.4.0), startup
+LinkingTo: Rcpp, RcppParallel
+Suggests: microbenchmark, htmltools, knitr, rmarkdown, testthat, promises,
+         magrittr, glue, qs, RcppRedis, future.callr
+License: GPL-3
+MD5sum: 79c117ecbb60350b2b7c26fc112039db
+
+Package: fst
+Version: 0.9.2
+Depends: R (>= 3.0.0)
+Imports: Rcpp
+LinkingTo: Rcpp
+Suggests: testthat, bit64, data.table, lintr, nanotime, crayon
+License: AGPL-3 | file LICENSE
+MD5sum: ab7475689cd0b2de641b217b9d9df8cf
+
+Package: fstcore
+Version: 0.9.4
+Depends: R (>= 3.0.0)
+Imports: Rcpp
+LinkingTo: Rcpp
+Suggests: testthat, lintr
+License: AGPL-3
+MD5sum: bf86a618f4d8b34a82a09ca50ca80c6c
+
 Package: rave
 Version: 1.0.0
 Depends: R (>= 3.6.0)
@@ -23,6 +53,13 @@ Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus,
 Suggests: devtools, rstudioapi (>= 0.9.0)
 License: MIT + file LICENSE
 MD5sum: 391057e0e0e9ab5575fc66716166dbb7
+
+Package: Rcpp
+Version: 1.0.4.9
+Imports: methods, utils
+Suggests: tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)
+License: GPL (>= 2)
+MD5sum: a7f2819b69b099b499372fe32e22762f
 
 Package: rutabaga
 Version: 0.1.7
