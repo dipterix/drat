@@ -116,7 +116,7 @@ for(destfile in source_packages){
 binary_packages <- list.files(binary_path, pattern = 'gz$', full.names = TRUE)
 for(destfile in binary_packages){
   print(destfile)
-  drat::insertPackage(destfile)
+  drat::insertPackage(destfile, repodir = '.')
 }
 
 # somehow it's installed to mac.binary/contrib, need to copy to el-capitan
