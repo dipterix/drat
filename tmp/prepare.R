@@ -31,11 +31,11 @@ dir.create(binary_target, recursive = TRUE, showWarnings = FALSE)
 
 
 dependencies <- list(
-  'Rcpp' = list(
-    url = 'https://github.com/RcppCore/drat/raw/gh-pages/src/contrib/',
-    name = 'Rcpp_1.0.4.9.tar.gz',
-    type = 'source'
-  ),
+  # 'Rcpp' = list(
+  #   url = 'https://github.com/RcppCore/drat/raw/gh-pages/src/contrib/',
+  #   name = 'Rcpp_1.0.4.9.tar.gz',
+  #   type = 'source'
+  # ),
   'dipsaus' = list(
     url = 'https://github.com/dipterix/dipsaus/archive/master.zip',
     type = 'github'
@@ -54,14 +54,6 @@ dependencies <- list(
   ),
   'rave' = list(
     url = 'https://github.com/beauchamplab/rave/archive/dev-1.1.zip',
-    type = 'github'
-  ),
-  'fstcore' = list(
-    url = 'https://github.com/fstpackage/fstcore/archive/master.zip',
-    type = 'github'
-  ),
-  'fst' = list(
-    url = 'https://github.com/fstpackage/fst/archive/master.zip',
     type = 'github'
   )
 )
@@ -119,19 +111,19 @@ for(destfile in binary_packages){
   drat::insertPackage(destfile, repodir = '.')
 }
 
-# somehow it's installed to mac.binary/contrib, need to copy to el-capitan
-fdir <- './bin/macosx/mac.binary/contrib/4.0/'
-fs <- list.files(fdir, full.names = FALSE, recursive = FALSE)
-for(f in fs){
-  file.copy(file.path(fdir, f), file.path(binary_target, f), overwrite = TRUE, copy.mode = TRUE, copy.date = TRUE)
-}
-
-fdir <- './bin/macosx/mac.binary/contrib/4.0/'
-# dir.create('./bin/macosx/contrib/4.0/', recursive = TRUE)
-fs <- list.files(fdir, full.names = FALSE, recursive = FALSE)
-for(f in fs){
-  file.copy(file.path(fdir, f), file.path('./bin/macosx/contrib/4.0/', f), overwrite = TRUE, copy.mode = TRUE, copy.date = TRUE)
-}
+# # somehow it's installed to mac.binary/contrib, need to copy to el-capitan
+# fdir <- './bin/macosx/mac.binary/contrib/4.0/'
+# fs <- list.files(fdir, full.names = FALSE, recursive = FALSE)
+# for(f in fs){
+#   file.copy(file.path(fdir, f), file.path(binary_target, f), overwrite = TRUE, copy.mode = TRUE, copy.date = TRUE)
+# }
+# 
+# fdir <- './bin/macosx/mac.binary/contrib/4.0/'
+# # dir.create('./bin/macosx/contrib/4.0/', recursive = TRUE)
+# fs <- list.files(fdir, full.names = FALSE, recursive = FALSE)
+# for(f in fs){
+#   file.copy(file.path(fdir, f), file.path('./bin/macosx/contrib/4.0/', f), overwrite = TRUE, copy.mode = TRUE, copy.date = TRUE)
+# }
 
 git2r::add(path = c(list.files('bin', full.names = TRUE), list.files('src', full.names = TRUE)))
 git2r::commit(message = strftime(Sys.time(), 'Rebuild %Y%m%d-%H%M%S'))
