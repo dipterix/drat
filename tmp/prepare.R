@@ -133,7 +133,10 @@ for(f in fs){
   file.copy(file.path(fdir, f), file.path('./bin/macosx/contrib/4.0/', f), overwrite = TRUE, copy.mode = TRUE, copy.date = TRUE)
 }
 
-
+git2r::add(path = c(list.files('bin', full.names = TRUE), list.files('src', full.names = TRUE)))
+git2r::commit(message = strftime(Sys.time(), 'Rebuild %Y%m%d-%H%M%S'))
+git2r::push()
+  
 # WARNING: Will download all dependent packages
 
 
