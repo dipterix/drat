@@ -1,43 +1,35 @@
 Package: dipsaus
-Version: 0.0.8
+Version: 0.0.8.9000
 Depends: R (>= 3.5.0)
-Imports: utils, grDevices, parallel, Rcpp, RcppParallel, R6, shiny, cli, stringr, jsonlite (>= 1.6),
-            future, future.apply, progressr, fastmap, base64url, base64enc, synchronicity, digest, rlang
-            (>= 0.4.0), yaml, startup
+Imports: utils, grDevices, parallel, Rcpp, RcppParallel, R6, shiny, cli, stringr, jsonlite (>= 1.6), future,
+            future.apply, progressr, fastmap, base64url, base64enc, synchronicity, digest, rlang (>= 0.4.0),
+            startup, rstudioapi
 LinkingTo: Rcpp, RcppParallel
-Suggests: microbenchmark, htmltools, knitr, rmarkdown, testthat, promises, magrittr, glue, qs, RcppRedis,
-            future.callr
+Suggests: microbenchmark, htmltools, knitr, rmarkdown, testthat, promises, magrittr, glue, yaml, qs,
+            RcppRedis, future.callr, remotes
 License: GPL-3
 Archs: i386, x64
 
 Package: rave
-Version: 1.0.0
+Version: 1.0.1
 Depends: R (>= 3.6.0)
-Imports: utils, stats, graphics, grDevices, glue, remotes, htmltools (>= 0.3.6), devtools, grid, crayon,
-            cli, signal (>= 0.7-6), dipsaus (>= 0.0.6), hdf5r (>= 1.0.0), R.matlab (>= 3.6.1), R6 (>=
-            2.2.2), jsonlite (>= 1.5), future (>= 1.10.0), shiny (>= 1.0.5), stringr (>= 1.2.0), yaml (>=
-            2.1.15), shinydashboard (>= 0.6.0), fftwtools (>= 0.9-7), digest (>= 0.6.13), shinyjs (>= 1.0),
-            rlang (>= 0.1.6.9000), DT (>= 0.4), reticulate (>= 1.6), fst (>= 0.8.8), servr (>= 0.13), later
-            (>= 0.8.0), startup (>= 0.12.0), threeBrain (>= 0.1.4), data.table (>= 1.11.8), pryr (>=
-            0.1.3), shinyFiles (>= 0.7.3)
+Imports: utils, stats, graphics, grDevices, glue, crayon, cli, htmltools (>= 0.3.6), devtools, grid, signal
+            (>= 0.7-6), dipsaus (>= 0.0.6), hdf5r (>= 1.0.0), R.matlab (>= 3.6.1), R6 (>= 2.2.2), future (>=
+            1.10.0), shiny (>= 1.0.5), stringr (>= 1.2.0), yaml (>= 2.1.15), shinydashboard (>= 0.6.0),
+            fftwtools (>= 0.9-7), digest (>= 0.6.13), shinyjs (>= 1.0), rlang (>= 0.1.6.9000), DT (>= 0.4),
+            reticulate (>= 1.6), fst (>= 0.8.8), servr (>= 0.13), later (>= 0.8.0), startup (>= 0.12.0),
+            threeBrain (>= 0.1.4), data.table (>= 1.11.8), pryr (>= 0.1.3), shinyFiles (>= 0.7.3)
 Suggests: knitr, rmarkdown, spelling, roxygen2, testthat, rstudioapi
 License: GPL-3
 
 Package: ravebuiltins
 Version: 0.1.1
 Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus, yaml (>= 2.2.0), shiny (>=
-            1.2.0), rlang (>= 0.3.0), stringr (>= 1.3.1), threeBrain (>= 0.1.3), future (>= 0.14.0),
-            magrittr (>= 1.5), circular (>= 0.4-93), lmerTest (>= 3.1-0), lsmeans, knitr, assertthat,
-            shinyjs, shinyFiles, reshape2, digest, DT, fst, htmltools, rave, rutabaga
+            1.2.0), rlang (>= 0.3.0), stringr (>= 1.3.1), threeBrain (>= 0.1.3), future (>= 0.14.0), magrittr
+            (>= 1.5), circular (>= 0.4-93), lmerTest (>= 3.1-0), lsmeans, knitr, assertthat, shinyjs,
+            shinyFiles, reshape2, digest, DT, fst, htmltools, rave, rutabaga
 Suggests: devtools, rstudioapi (>= 0.9.0)
 License: MIT + file LICENSE
-
-Package: Rcpp
-Version: 1.0.4.6
-Imports: methods, utils
-Suggests: tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)
-License: GPL (>= 2)
-Archs: i386, x64
 
 Package: rutabaga
 Version: 0.1.7
