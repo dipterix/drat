@@ -6,7 +6,7 @@ Imports: utils, grDevices, parallel, Rcpp, RcppParallel, R6, shiny, cli, stringr
 LinkingTo: Rcpp, RcppParallel
 Suggests: microbenchmark, htmltools, knitr, rmarkdown, testthat, promises, magrittr, glue, yaml, qs, RcppRedis, future.callr, remotes
 License: GPL-3
-MD5sum: fb5d73b76cb4dd060c67a9482bbcb414
+MD5sum: 8a5322d369912beca8daeb83c31cb406
 NeedsCompilation: yes
 
 Package: rave
@@ -19,7 +19,7 @@ Imports: utils, stats, graphics, grDevices, glue, crayon, cli, htmltools (>= 0.3
                threeBrain (>= 0.1.4), data.table (>= 1.11.8), pryr (>= 0.1.3), shinyFiles (>= 0.7.3)
 Suggests: knitr, rmarkdown, spelling, roxygen2, testthat, rstudioapi
 License: GPL-3
-MD5sum: 93d929ee1b9695b232f851e9e6a22006
+MD5sum: 7af3e35dc74ad4020f614ee50ef36fd5
 NeedsCompilation: no
 
 Package: ravebuiltins
@@ -29,7 +29,7 @@ Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus,
                3.1-0), lsmeans, knitr, assertthat, shinyjs, shinyFiles, reshape2, digest, DT, fst, htmltools, rave, rutabaga
 Suggests: devtools, rstudioapi (>= 0.9.0)
 License: MIT + file LICENSE
-MD5sum: 1840a65c926a9e6405959d872f7247c5
+MD5sum: 85e79de8fabdd5827642eeb987cba9ed
 NeedsCompilation: no
 
 Package: rutabaga
@@ -37,7 +37,7 @@ Version: 0.1.7
 Depends: R (>= 3.5)
 Imports: utils, stats, grDevices, graphics, methods, magrittr, stringr (>= 1.3.1), digest, dipsaus
 License: GPL-3
-MD5sum: 3d44e1167100f8d90ad50d43760bbb78
+MD5sum: fc6103167bc0ac41b28e9404ee34f96f
 NeedsCompilation: no
 
 Package: threeBrain
@@ -47,5 +47,5 @@ Imports: grDevices, graphics, dipsaus, shiny (>= 1.2.0), digest (>= 0.6.22), fre
                0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown, pryr,
 License: GPL-3
-MD5sum: 2ffff4eae5329b1b923cd341370da9bf
+MD5sum: f92794c5817eedf1b2d4d17468ca2dad
 NeedsCompilation: no
