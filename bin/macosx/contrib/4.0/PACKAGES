@@ -8,7 +8,7 @@ LinkingTo: Rcpp, RcppParallel
 Suggests: microbenchmark, htmltools, knitr, rmarkdown, testthat, promises, magrittr, glue, yaml, qs,
             RcppRedis, future.callr, remotes
 License: GPL-3
-MD5sum: aca1c74f090e24e2e14ce205154d5a85
+MD5sum: 621ea9b3c5a292da8b5ecbfba3b606fe
 
 Package: rave
 Version: 1.0.1
@@ -21,14 +21,14 @@ Imports: utils, stats, graphics, grDevices, raveio, htmltools (>= 0.3.6), devtoo
 Suggests: knitr, data.table (>= 1.11.8), servr (>= 0.13), reticulate (>= 1.6), rmarkdown, spelling, roxygen2,
             testthat, rstudioapi
 License: GPL-3
-MD5sum: 099fb101c68848a46ab355b8148f3321
+MD5sum: e2bc7f92d9dfac2830bda57b74235494
 
 Package: ravebase
 Version: 0.0.1
 Imports: utils, stats, raveio, dipsaus, threeBrain, lazyarray, rlang, future, cli, stringr
 Suggests: shiny
 License: GPL-3
-MD5sum: 9634d7f0e25ec0fe2e2c5031d538bc7b
+MD5sum: 5d9b37ccd8febce81ae10b8a2d0d1b3a
 
 Package: ravebuiltins
 Version: 0.1.1
@@ -38,7 +38,7 @@ Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus,
             shinyjs, shinyFiles, reshape2, digest, DT, fst, htmltools, rave, rutabaga
 Suggests: devtools, rstudioapi (>= 0.9.0)
 License: MIT + file LICENSE
-MD5sum: 2524cc7c2cfa034414b9e5083d1f7d1e
+MD5sum: 1ec02bfa477fc7a2b9b5fe20eea09b38
 
 Package: raveio
 Version: 0.0.3
@@ -48,14 +48,14 @@ Imports: utils, data.table, parallel, yaml (>= 2.2.1), hdf5r, fst (>= 0.9.2), di
             1.1.0), ini (>= 0.3.1), jsonlite (>= 1.7.0), R6
 Suggests: pryr, spelling, testthat
 License: GPL-3
-MD5sum: ff52664fb0082781b945f4c6f414997b
+MD5sum: ab0cd51f1e731c49a35312d92e01a3d4
 
 Package: rutabaga
 Version: 0.1.7
 Depends: R (>= 3.5)
 Imports: utils, stats, grDevices, graphics, methods, magrittr, stringr (>= 1.3.1), digest, dipsaus
 License: GPL-3
-MD5sum: 08cee59c1fcd482c31819e9ab483be2e
+MD5sum: da5a4c77c78d2304c641aed61eb0e9e3
 
 Package: threeBrain
 Version: 0.1.8.1
@@ -64,4 +64,4 @@ Imports: grDevices, graphics, dipsaus, shiny (>= 1.2.0), digest (>= 0.6.22), fre
             1.3.1), htmlwidgets (>= 1.3), R6 (>= 2.3.0), gifti (>= 0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown, pryr,
 License: GPL-3
-MD5sum: 5ac0954f798d9c08addd3fa0b9aedee1
+MD5sum: 7b0aa603a066b05803d91a3987a51b07

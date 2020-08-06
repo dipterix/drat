@@ -14,7 +14,7 @@ source_path <- 'tmp/source/'
 github_path <- 'tmp/source/github'
 download_path <- 'tmp/downloads'
 binary_path <- file.path(proj_dir, 'tmp', os)
-unlink(source_path, recursive = TRUE)
+unlink(source_path, recursive = TRUE, force = TRUE)
 unlink(binary_path, recursive = TRUE)
 dir.create(binary_path, recursive = TRUE, showWarnings = FALSE)
 dir.create(github_path, recursive = TRUE, showWarnings = FALSE)
@@ -30,11 +30,11 @@ dir.create(binary_target, recursive = TRUE, showWarnings = FALSE)
 
 
 dependencies <- list(
-  'Rcpp' = list(
-    url = 'https://github.com/RcppCore/drat/raw/gh-pages/src/contrib/',
-    name = 'Rcpp_1.0.4.6.tar.gz',
-    type = 'source'
-  ),
+  # 'Rcpp' = list(
+  #   url = 'https://github.com/RcppCore/drat/raw/gh-pages/src/contrib/',
+  #   name = 'Rcpp_1.0.4.6.tar.gz',
+  #   type = 'source'
+  # ),
   'dipsaus' = list(
     url = 'https://github.com/dipterix/dipsaus/archive/master.zip',
     type = 'github'
@@ -52,7 +52,7 @@ dependencies <- list(
     type = 'github'
   ),
   'rave' = list(
-    url = 'https://github.com/beauchamplab/rave/archive/dev-1.0.zip',
+    url = 'https://github.com/beauchamplab/rave/archive/dev-1.1.zip',
     type = 'github'
   )
 )
@@ -98,6 +98,11 @@ for(pkg in names(dependencies)){
   
 }
 
+proj_dir <- normalizePath('.')
+options(dratRepo = proj_dir)
+drat::addRepo('dipterix', paste0('file:', proj_dir))
+source_path <- 'tmp/source/'
+binary_path <- file.path(proj_dir, 'tmp', os)
 source_packages <- list.files(source_path, pattern = 'gz$', full.names = TRUE)
 for(destfile in source_packages){
   devtools::build(destfile, path = binary_path, binary = TRUE)
