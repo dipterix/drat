@@ -52,8 +52,16 @@ dependencies <- list(
     url = 'https://github.com/beauchamplab/ravebuiltins/archive/migrate2.zip',
     type = 'github'
   ),
+  'raveio' = list(
+    url = 'https://github.com/beauchamplab/raveio/archive/master.zip',
+    type = 'github'
+  ),
+  'ravebase' = list(
+    url = 'https://github.com/dipterix/ravebase/archive/master.zip',
+    type = 'github'
+  ),
   'rave' = list(
-    url = 'https://github.com/beauchamplab/rave/archive/dev-1.1.zip',
+    url = 'https://github.com/beauchamplab/rave/archive/dev-raveio.zip',
     type = 'github'
   )
 )
