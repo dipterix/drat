@@ -61,7 +61,7 @@ dependencies <- list(
     type = 'github'
   ),
   'rave' = list(
-    url = 'https://github.com/beauchamplab/rave/archive/dev-raveio.zip',
+    url = 'https://github.com/beauchamplab/rave/archive/master.zip',
     type = 'github'
   )
 )
