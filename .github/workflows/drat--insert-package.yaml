@@ -16,7 +16,7 @@ jobs:
       matrix:
         config:
         - {os: macOS-latest,   r: 'release'}
-#        - {os: windows-latest, r: 'release'}
+        - {os: windows-latest, r: 'release'}
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: ${{ matrix.config.rspm }}
@@ -34,23 +34,33 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v1
       
-      - name: Clean start
-        run: |
-          rm -rf drat-tmp
-          
       - name: Install dependencies
         run: |
           install.packages(c('remotes', 'BiocManager'))
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
-
-      - name: Install packages
-        shell: Rscript {0}
+      
+      - name: Cache R packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
+      
+      - name: Install dependencies
         run: |
           remotes::install_cran(c("roxygen2", "devtools"), dependencies = TRUE, upgrade = 'never')
           BiocManager::install('rhdf5', update = FALSE, type = 'source')
+          remotes::install_cran(c("dipsaus", "raveio", "threeBrain"), dependencies = TRUE, upgrade = 'never')
           remotes::install_github(c(
             "dipterix/drat-1",
+            "beauchamplab/ravebuiltins@migrate2"
+          ), dependencies = TRUE, upgrade = 'never')
+        shell: Rscript {0}
+      
+      - name: Install packages
+        run: |
+          remotes::install_github(c(
             "dipterix/dipsaus",
             "dipterix/threeBrain",
             "beauchamplab/raveio",
@@ -59,6 +69,7 @@ jobs:
             "dipterix/ravebase",
             "beauchamplab/ravebuiltins@migrate2"
           ), dependencies = TRUE, upgrade = 'never')
+        shell: Rscript {0}
 
       - name: Compile
         shell: Rscript {0}
@@ -76,5 +87,3 @@ jobs:
           git commit --allow-empty -m "Automated deploy from ${REPO}"
           git remote -v
           git push origin HEAD:gh-pages
-          cd ..
-          rm -rf drat-tmp
