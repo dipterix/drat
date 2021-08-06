@@ -16,7 +16,7 @@ jobs:
       matrix:
         config:
         - {os: macOS-latest,   r: 'release'}
-        - {os: windows-latest, r: 'release'}
+#        - {os: windows-latest, r: 'release'}
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: ${{ matrix.config.rspm }}
@@ -24,6 +24,8 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
+      - with:
+        ref: gh-pages
 
       - uses: r-lib/actions/setup-r@master
         with:
@@ -32,18 +34,10 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v1
       
-      - name: Drat -- clone dipterix/drat
+      - name: Clean start
         run: |
           rm -rf drat-tmp
-          git clone https://github.com/dipterix/drat.git drat-tmp
-          cp ./tmp/prepare.R drat-tmp/prepare.R
-          cd drat-tmp
-          git checkout gh-pages
           
-      - name: Test
-        run: |
-          cd drat-tmp
-
       - name: Install dependencies
         run: |
           install.packages(c('remotes', 'BiocManager'))
@@ -70,35 +64,11 @@ jobs:
         shell: Rscript {0}
         run: |
           repo_dname = ""
-          source("./drat-tmp/prepare.R")
-
-      - name: Drat -- insert
-        if: success()
-        shell: Rscript {0}
-        run: |
-          repo_dname = ""
-          fs <- list.files(file.path(".", repo_dname), all.files = FALSE, full.names = FALSE, recursive = FALSE, include.dirs = TRUE, no.. = FALSE)
-          fs <- fs[!fs %in% c(".git", ".github", ".Rproj.user", "tmp", "drat-tmp", "drat.Rproj")]
-          if( dipsaus::get_os() != 'windows' ){
-            fs <- fs[!fs %in% c('src')]
-          }
-          root <- file.path("./drat-tmp", repo_dname)
-          dir.create(root, recursive = TRUE, showWarnings = FALSE)
-          for(f in fs){
-            from <- file.path(".", repo_dname, f)
-              if(dir.exists(f)){
-                file.copy(from, root, overwrite = TRUE, recursive = TRUE)
-              } else {
-                file.copy(from, file.path(root, f), overwrite = TRUE)
-              }
-          }
+          source("https://raw.githubusercontent.com/dipterix/drat/master/tmp/prepare.R")
 
       - name: Drat -- commit and push
-        env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: success()
         run: |
-          cd drat-tmp
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add -A *
@@ -106,3 +76,5 @@ jobs:
           git commit --allow-empty -m "Automated deploy from ${REPO}"
           git remote -v
           git push origin HEAD:gh-pages
+          cd ..
+          rm -rf drat-tmp
