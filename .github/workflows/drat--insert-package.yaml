@@ -126,13 +126,13 @@ jobs:
           }
           root <- file.path("./drat-tmp", repo_dname)
           dir.create(root, recursive = TRUE, showWarnings = FALSE)
-          fs <- file.path(root, fs)
           for(f in fs){
-             if(dir.exists(f)){
-               file.copy(f, ".", overwrite = TRUE, recursive = TRUE)
-             } else {
-               file.copy(f, basename(f), overwrite = TRUE)
-             }
+            from <- file.path(".", repo_dname, f)
+              if(dir.exists(f)){
+                file.copy(from, root, overwrite = TRUE, recursive = TRUE)
+              } else {
+                file.copy(from, file.path(root, f), overwrite = TRUE)
+              }
           }
 
       - name: Drat -- commit and push

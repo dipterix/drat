@@ -1,28 +1,34 @@
 # Script to add packages
-os <- 'macosx/el-capitan'
+proj_dir <- normalizePath('.')
+repo_dir <- file.path(proj_dir, get0("repo_dname", ifnotfound = ""))
+
+# https://cran.rstudio.com/src/contrib
 rinfo <- R.Version()
 major <- rinfo$major
 minor <- strsplit(rinfo$minor, '\\.')[[1]][[1]]
 rver <- sprintf('%s.%s', major, minor)
 # install.packages('drat')
 
-proj_dir <- normalizePath('.')
-options(dratRepo = proj_dir)
-drat::addRepo('dipterix', paste0('file:', proj_dir))
+dir.create(repo_dir, showWarnings = FALSE, recursive = TRUE)
+options(dratRepo = repo_dir)
+drat::addRepo('dipterix', paste0('file:', repo_dir))
 
-source_path <- 'tmp/source/'
-github_path <- 'tmp/source/github'
-binary_path <- file.path(proj_dir, 'tmp', os)
-dir.create(binary_path, recursive = TRUE, showWarnings = FALSE)
+if(!file.exists(file.path(repo_dir, 'index.html'))){
+  writeLines("<!doctype html><title>empty</title>", file.path(repo_dir, 'index.html'))
+}
+
+source_path <- './tmp/source/'
+github_path <- './tmp/source/github'
+download_path <- './tmp/downloads'
+unlink(source_path, recursive = TRUE)
+unlink(download_path, recursive = TRUE)
+# dir.create(binary_path, recursive = TRUE, showWarnings = FALSE)
 dir.create(github_path, recursive = TRUE, showWarnings = FALSE)
-dir.create(file.path(proj_dir, 'bin', os, 'contrib', rver), recursive = TRUE, showWarnings = FALSE)
+dir.create(download_path, recursive = TRUE, showWarnings = FALSE)
+
+
 
 dependencies <- list(
-  'Rcpp' = list(
-    url = 'https://github.com/RcppCore/drat/raw/gh-pages/src/contrib/',
-    name = 'Rcpp_1.0.4.5.tar.gz',
-    type = 'source'
-  ),
   'dipsaus' = list(
     url = 'https://github.com/dipterix/dipsaus/archive/master.zip',
     type = 'github'
@@ -39,8 +45,16 @@ dependencies <- list(
     url = 'https://github.com/beauchamplab/ravebuiltins/archive/migrate2.zip',
     type = 'github'
   ),
+  'raveio' = list(
+    url = 'https://github.com/beauchamplab/raveio/archive/master.zip',
+    type = 'github'
+  ),
+  'ravebase' = list(
+    url = 'https://github.com/dipterix/ravebase/archive/master.zip',
+    type = 'github'
+  ),
   'rave' = list(
-    url = 'https://github.com/beauchamplab/rave/archive/dev-1.0.zip',
+    url = 'https://github.com/beauchamplab/rave/archive/master.zip',
     type = 'github'
   )
 )
@@ -52,7 +66,6 @@ cache_source <- function(pkg){
   info <- dependencies[[pkg]]
   destfile <- paste0(source_path, info$name)
   download.file(paste0(info$url, info$name), destfile)
-  
 }
 
 cache_github <- function(pkg){
@@ -86,16 +99,38 @@ for(pkg in names(dependencies)){
   
 }
 
+# Build source packages, and prune old packages
 source_packages <- list.files(source_path, pattern = 'gz$', full.names = TRUE)
 for(destfile in source_packages){
-  devtools::build(destfile, path = binary_path, binary = TRUE)
-  drat::insertPackage(destfile)
+  drat::insertPackage(destfile, action = "prune")
 }
 
-binary_packages <- list.files(binary_path, pattern = 'gz$', full.names = TRUE)
-for(destfile in binary_packages){
-  print(destfile)
-  drat::insertPackage(destfile)
+# Get source path
+source_contrib <- drat:::contrib.url2(repo_dir, 'source')
+source_contrib <- normalizePath(source_contrib, mustWork = TRUE)
+source_packages <- list.files(source_contrib, pattern = "tar\\.gz$", full.names = TRUE)
+
+
+
+for(destfile in source_packages){
+  f <- tempfile()
+  if(dir.exists(f)){ unlink(f, recursive = TRUE) }
+  dir.create(f, recursive = TRUE, showWarnings = FALSE)
+  devtools::build(destfile, path = f, binary = TRUE)
+  bin_file <- list.files(f, full.names = TRUE)
+  
+  pkginfo <- drat:::getPackageInfo(bin_file)
+  pkgtype <- drat:::identifyPackageType(bin_file, pkginfo)
+  pkgdir <- normalizePath(drat:::contrib.url2(repo_dir, pkgtype, pkginfo["Rmajor"]),
+                          mustWork = FALSE)
+  if(!dir.exists(pkgdir)){
+    dir.create(pkgdir, recursive = TRUE, showWarnings = FALSE)
+  }
+  
+  drat::insertPackage(bin_file, action = 'prune')
 }
 
+# clean
+unlink(source_path, recursive = TRUE)
+unlink(download_path, recursive = TRUE)
 
