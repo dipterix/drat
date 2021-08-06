@@ -1,6 +1,20 @@
 Package: dipsaus
+Version: 0.0.8.9000
+Depends: R (>= 3.5.0)
+Imports: utils, grDevices, parallel, Rcpp, RcppParallel, R6, shiny, cli, stringr, jsonlite (>= 1.6), future,
+            future.apply, progressr, fastmap, base64url, base64enc, synchronicity, digest, rlang (>= 0.4.0),
+            startup, rstudioapi
+LinkingTo: Rcpp, RcppParallel
+Suggests: microbenchmark, htmltools, knitr, rmarkdown, testthat, promises, magrittr, glue, yaml, qs,
+            RcppRedis, future.callr, remotes
+License: GPL-3
+MD5sum: 677006dca3459e0e0a417f99a36d3882
+NeedsCompilation: yes
+
+Package: dipsaus
 Version: 0.1.1
 Depends: R (>= 3.5.0)
+<<<<<<< HEAD
 Imports: utils, grDevices, parallel, Rcpp, RcppParallel, R6,
       shiny, cli, stringr, jsonlite (>= 1.6), future,
       future.apply, progressr, fastmap, base64url,
@@ -10,8 +24,16 @@ LinkingTo: Rcpp, RcppParallel
 Suggests: microbenchmark, htmltools, knitr, rmarkdown,
       testthat, promises, magrittr, glue, yaml, qs,
       RcppRedis, future.callr, remotes
+=======
+Imports: utils, grDevices, parallel, Rcpp, RcppParallel, R6, shiny, cli, stringr, jsonlite (>= 1.6), future,
+            future.apply, progressr, fastmap, base64url, base64enc, synchronicity, digest, rlang (>= 0.4.0),
+            startup, rstudioapi (>= 0.11)
+LinkingTo: Rcpp, RcppParallel
+Suggests: microbenchmark, htmltools, knitr, rmarkdown, testthat, promises, magrittr, glue, yaml, qs,
+            RcppRedis, future.callr, remotes
+>>>>>>> b636f5323a06a934cce0ea04ac375d11b0a09ba7
 License: GPL-3
-MD5sum: 7c7f80f5d56c7e187fa3228ab3dbb215
+MD5sum: 82498eabd2e7b87483bfe80b7f23b312
 NeedsCompilation: yes
 
 Package: dipsaus
@@ -49,8 +71,23 @@ MD5sum: 9841072fc95b2f741427ff7f08b819ff
 NeedsCompilation: no
 
 Package: rave
+Version: 1.0.1
+Depends: R (>= 3.6.0)
+Imports: utils, stats, graphics, grDevices, glue, crayon, cli, htmltools (>= 0.3.6), devtools, grid, signal
+            (>= 0.7-6), dipsaus (>= 0.0.6), hdf5r (>= 1.0.0), R.matlab (>= 3.6.1), R6 (>= 2.2.2), future (>=
+            1.10.0), shiny (>= 1.0.5), stringr (>= 1.2.0), yaml (>= 2.1.15), shinydashboard (>= 0.6.0),
+            fftwtools (>= 0.9-7), digest (>= 0.6.13), shinyjs (>= 1.0), rlang (>= 0.1.6.9000), DT (>= 0.4),
+            reticulate (>= 1.6), fst (>= 0.8.8), servr (>= 0.13), later (>= 0.8.0), startup (>= 0.12.0),
+            threeBrain (>= 0.1.4), data.table (>= 1.11.8), pryr (>= 0.1.3), shinyFiles (>= 0.7.3)
+Suggests: knitr, rmarkdown, spelling, roxygen2, testthat, rstudioapi
+License: GPL-3
+MD5sum: d92df2248618213f99f31de9de628b43
+NeedsCompilation: no
+
+Package: rave
 Version: 1.0.2
 Depends: R (>= 3.6.0)
+<<<<<<< HEAD
 Imports: utils, stats, graphics, grDevices, raveio (>=
       0.0.3), htmltools (>= 0.3.6), devtools, grid, signal
       (>= 0.7-6), dipsaus (>= 0.1.1), R6 (>= 2.2.2), future
@@ -63,8 +100,17 @@ Imports: utils, stats, graphics, grDevices, raveio (>=
 Suggests: knitr, data.table (>= 1.11.8), servr (>= 0.13),
       reticulate (>= 1.6), rmarkdown, spelling, roxygen2,
       testthat, rstudioapi
+=======
+Imports: utils, stats, graphics, grDevices, raveio (>= 0.0.3), htmltools (>= 0.3.6), devtools, grid, signal
+            (>= 0.7-6), dipsaus (>= 0.1.1), R6 (>= 2.2.2), future (>= 1.10.0), shiny (>= 1.0.5), stringr (>=
+            1.2.0), shinydashboard (>= 0.6.0), fftwtools (>= 0.9-7), digest (>= 0.6.13), shinyjs (>= 1.0),
+            rlang (>= 0.1.6.9000), DT (>= 0.4), startup (>= 0.12.0), threeBrain (>= 0.1.8), pryr (>= 0.1.3),
+            shinyFiles (>= 0.7.3), shinyWidgets (>= 0.5.3)
+Suggests: knitr, data.table (>= 1.11.8), servr (>= 0.13), reticulate (>= 1.6), rmarkdown, spelling, roxygen2,
+            testthat, rstudioapi
+>>>>>>> b636f5323a06a934cce0ea04ac375d11b0a09ba7
 License: GPL-3
-MD5sum: dfd5f92687cf97f2cda25839a1630f8b
+MD5sum: f94c10f5e06e8d706a46faff0ba59d60
 NeedsCompilation: no
 
 Package: ravebase
@@ -73,11 +119,16 @@ Imports: utils, stats, raveio, dipsaus, threeBrain,
       lazyarray, rlang, future, cli, stringr
 Suggests: shiny, testthat
 License: GPL-3
+<<<<<<< HEAD
 MD5sum: 44798597fe285cd551d52c86be36591d
+=======
+MD5sum: db34632168befef6dec9f65d22d7b8e4
+>>>>>>> b636f5323a06a934cce0ea04ac375d11b0a09ba7
 NeedsCompilation: no
 
 Package: ravebuiltins
 Version: 0.1.1
+<<<<<<< HEAD
 Imports: methods, stats, grDevices, graphics, grid, abind,
       car, utils, data.table, dipsaus, threeBrain (>=
       0.1.3), magrittr (>= 1.5), circular (>= 0.4-93),
@@ -89,19 +140,34 @@ Suggests: devtools, htmltools, fastmap, lsmeans, rstudioapi
       (>= 0.9.0), yaml (>= 2.2.0), future (>= 0.14.0)
 License: MIT + file LICENSE
 MD5sum: 738d6a157da68b4cece326080c4ac90c
+=======
+Imports: methods, stats, graphics, grid, abind, car, utils, data.table, dipsaus, yaml (>= 2.2.0), shiny (>=
+            1.2.0), rlang (>= 0.3.0), stringr (>= 1.3.1), threeBrain (>= 0.1.3), future (>= 0.14.0), magrittr
+            (>= 1.5), circular (>= 0.4-93), lmerTest (>= 3.1-0), emmeans (>= 1.4.8), knitr, assertthat,
+            shinyjs, shinyFiles, reshape2, digest, DT, fst, htmltools, rave, rutabaga
+Suggests: devtools, rstudioapi (>= 0.9.0)
+License: MIT + file LICENSE
+MD5sum: 7b68cac849b8f95dc38189c680a5b762
+>>>>>>> b636f5323a06a934cce0ea04ac375d11b0a09ba7
 NeedsCompilation: no
 
 Package: raveio
 Version: 0.0.3
 Depends: R (>= 3.6.0)
+<<<<<<< HEAD
 Imports: utils, data.table, parallel, yaml (>= 2.2.1),
       hdf5r, fst (>= 0.9.2), dipsaus (>= 0.0.9), R.matlab
       (>= 3.6.2), glue, later, stringr (>= 1.4.0), rlang
       (>= 0.4.7), edfReader (>= 1.2.1), lazyarray (>=
       1.1.0), ini (>= 0.3.1), jsonlite (>= 1.7.0), R6
+=======
+Imports: utils, data.table, parallel, yaml (>= 2.2.1), hdf5r, fst (>= 0.9.2), dipsaus (>= 0.0.9), R.matlab (>=
+            3.6.2), glue, later, stringr (>= 1.4.0), rlang (>= 0.4.7), edfReader (>= 1.2.1), lazyarray (>=
+            1.1.0), ini (>= 0.3.1), jsonlite (>= 1.7.0), R6
+>>>>>>> b636f5323a06a934cce0ea04ac375d11b0a09ba7
 Suggests: pryr, spelling, testthat
 License: GPL-3
-MD5sum: 532e9a4a2edd8e3672683cb89d1a5a50
+MD5sum: 1ddc85e1f09f62d6fee579f1a9ad323f
 NeedsCompilation: no
 
 Package: raveio
@@ -123,20 +189,40 @@ Depends: R (>= 3.5)
 Imports: utils, stats, grDevices, graphics, methods,
       magrittr, stringr (>= 1.3.1), digest, dipsaus
 License: GPL-3
+<<<<<<< HEAD
 MD5sum: 7321195b5ffe5426a125edb5d68c4210
+=======
+MD5sum: f3d985bc6ef5e049e69a88d5a4e00c5f
+NeedsCompilation: no
+
+Package: threeBrain
+Version: 0.1.8
+Imports: grDevices, graphics, dipsaus, shiny (>= 1.2.0), digest (>= 0.6.22), freesurferformats (>= 0.1.7),
+            crayon (>= 1.3.4), base64enc (>= 0.1-3), htmltools (>= 0.3.6), jsonlite (>= 1.5), stringr (>=
+            1.3.1), htmlwidgets (>= 1.3), R6 (>= 2.3.0), gifti (>= 0.7.5), oro.nifti (>= 0.9.1)
+Suggests: knitr, rmarkdown, pryr,
+License: GPL-3
+MD5sum: c4298db6d3b9f75bba405db33a2ae739
+>>>>>>> b636f5323a06a934cce0ea04ac375d11b0a09ba7
 NeedsCompilation: no
 
 Package: threeBrain
 Version: 0.1.9
+<<<<<<< HEAD
 Imports: grDevices, graphics, dipsaus, xml2, shiny (>=
       1.2.0), digest (>= 0.6.22), freesurferformats (>=
       0.1.7), crayon (>= 1.3.4), base64enc (>= 0.1-3),
       htmltools (>= 0.3.6), jsonlite (>= 1.5), stringr (>=
       1.3.1), htmlwidgets (>= 1.3), R6 (>= 2.3.0), gifti
       (>= 0.7.5), oro.nifti (>= 0.9.1)
+=======
+Imports: grDevices, graphics, dipsaus, xml2, shiny (>= 1.2.0), digest (>= 0.6.22), freesurferformats (>=
+            0.1.7), crayon (>= 1.3.4), base64enc (>= 0.1-3), htmltools (>= 0.3.6), jsonlite (>= 1.5), stringr
+            (>= 1.3.1), htmlwidgets (>= 1.3), R6 (>= 2.3.0), gifti (>= 0.7.5), oro.nifti (>= 0.9.1)
+>>>>>>> b636f5323a06a934cce0ea04ac375d11b0a09ba7
 Suggests: knitr, rmarkdown, pryr,
 License: GPL-3 | file LICENSE
-MD5sum: 9b667a727823da122ab026683911ecfd
+MD5sum: 9e53bb3da1cac1cfafdc2edae85d7de6
 NeedsCompilation: no
 
 Package: threeBrain
