@@ -61,7 +61,7 @@ jobs:
 
       - name: Query dependencies
         run: |
-          install.packages('remotes')
+          install.packages(c('remotes', 'BiocManager'))
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
 
@@ -76,7 +76,8 @@ jobs:
       - name: Install dependencies
         shell: Rscript {0}
         run: |
-          remotes::install_cran(c("roxygen2", "devtools"))
+          remotes::install_cran(c("roxygen2", "devtools"), dependencies = TRUE, , upgrade = 'never')
+          BiocManager::install('rhdf5', update = FALSE, type = 'source')
           remotes::install_github(c(
             "dipterix/drat-1",
             "dipterix/dipsaus",
@@ -86,7 +87,7 @@ jobs:
             "beauchamplab/rave",
             "dipterix/ravebase",
             "beauchamplab/ravebuiltins@migrate2"
-          ))
+          ), dependencies = TRUE, upgrade = 'never')
 
       - name: Download source packages
         shell: Rscript {0}
