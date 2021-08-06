@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-        ref: gh-pages
+          ref: gh-pages
 
       - uses: r-lib/actions/setup-r@master
         with:
