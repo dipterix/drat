@@ -10,7 +10,7 @@ LinkingTo: Rcpp, RcppParallel
 Suggests: knitr, rmarkdown, testthat, microbenchmark, magrittr, yaml,
         future.callr, remotes, glue
 License: GPL-3
-MD5sum: f554666cc2488a68dfdbb746bd172866
+MD5sum: 702442145858f964af89f5d7ced7b0cd
 
 Package: rave
 Version: 1.0.2.1
@@ -26,7 +26,7 @@ Suggests: knitr, rhdf5, data.table (>= 1.11.8), servr (>= 0.13),
         reticulate (>= 1.6), rmarkdown, spelling, roxygen2, testthat,
         lobstr, rstudioapi
 License: GPL-3
-MD5sum: 2e651b6169d9c322d7f0b0e3f73ecd0d
+MD5sum: 33a158e92fdce50a56a51ead9f9e45c3
 
 Package: ravebase
 Version: 0.0.1
@@ -34,7 +34,7 @@ Imports: utils, stats, raveio, dipsaus, threeBrain, lazyarray, rlang,
         future, cli, stringr
 Suggests: shiny, testthat
 License: GPL-3
-MD5sum: a44b02a4757a02197f48688d889b9696
+MD5sum: aa21c07112af32a10d04fff78ff9b3c7
 
 Package: ravebuiltins
 Version: 0.1.1
@@ -47,7 +47,7 @@ Imports: methods, stats, grDevices, graphics, grid, abind, car, utils,
 Suggests: devtools, htmltools, fastmap, lsmeans, rstudioapi (>= 0.9.0),
         yaml (>= 2.2.0), future (>= 0.14.0)
 License: MIT + file LICENSE
-MD5sum: 1f8c45c2727ad5512432e3eb63c29362
+MD5sum: 7f38518fa84bac1cc00399aa6f86f54c
 
 Package: raveio
 Version: 0.0.4.9000
@@ -58,7 +58,7 @@ Imports: utils, data.table, parallel, yaml (>= 2.2.1), fst (>= 0.9.2),
         0.3.1), jsonlite (>= 1.7.0), R6, BiocManager
 Suggests: testthat, rhdf5 (>= 2.36.0)
 License: GPL-3
-MD5sum: 929f03482efe643169cc0b4f260bb4cd
+MD5sum: 52ec5dc08b2c3cb56f9b833fbe5cfb60
 
 Package: rutabaga
 Version: 0.1.7
@@ -66,7 +66,7 @@ Depends: R (>= 3.5)
 Imports: utils, stats, grDevices, graphics, methods, magrittr, stringr
         (>= 1.3.1), digest, dipsaus
 License: GPL-3
-MD5sum: b55d3b93fb61e56acc059d0939e390ea
+MD5sum: 4483fb7942d2a4ac2e5d1157baa4d207
 
 Package: threeBrain
 Version: 0.2.1.9000
@@ -76,4 +76,4 @@ Imports: grDevices, graphics, dipsaus, xml2, shiny (>= 1.2.0), digest
         (>= 0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown
 License: GPL-3 | file LICENSE
-MD5sum: 9599ab4ef25feffbb8fc6d93ee96a49a
+MD5sum: 8a8572b87a811e8babd28a0703d9fb16
