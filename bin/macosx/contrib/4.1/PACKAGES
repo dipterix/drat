@@ -10,7 +10,7 @@ LinkingTo: Rcpp, RcppParallel
 Suggests: knitr, rmarkdown, testthat, microbenchmark,
       magrittr, yaml, future.callr, remotes, glue
 License: GPL-3
-MD5sum: fd505ae0cc99f6804ab70433022b5e73
+MD5sum: 7b519d03fcc1f76d8d9393b57cd26e1b
 
 Package: rave
 Version: 1.0.2.1
@@ -28,7 +28,7 @@ Suggests: knitr, rhdf5, data.table (>= 1.11.8), servr (>=
       0.13), reticulate (>= 1.6), rmarkdown, spelling,
       roxygen2, testthat, lobstr, rstudioapi
 License: GPL-3
-MD5sum: 09d0b5bf3afbc6c450a39576e7474552
+MD5sum: 17cdc8e3f8923ec20818dd859fbe658b
 
 Package: ravebase
 Version: 0.0.1
@@ -36,7 +36,7 @@ Imports: utils, stats, raveio, dipsaus, threeBrain,
       lazyarray, rlang, future, cli, stringr
 Suggests: shiny, testthat
 License: GPL-3
-MD5sum: 4b764eb677e6dfe3744bf85a40966e3a
+MD5sum: 2a0feb7f1af8a2e79f4876a89e8993a5
 
 Package: ravebuiltins
 Version: 0.1.1
@@ -50,7 +50,7 @@ Imports: methods, stats, grDevices, graphics, grid, abind,
 Suggests: devtools, htmltools, fastmap, lsmeans, rstudioapi
       (>= 0.9.0), yaml (>= 2.2.0), future (>= 0.14.0)
 License: MIT + file LICENSE
-MD5sum: 6dbc879135640256bd9de7cd903f2cb0
+MD5sum: 7a78d67fe9a483b56dbfeddcc02cdd85
 
 Package: raveio
 Version: 0.0.4.9000
@@ -62,7 +62,7 @@ Imports: utils, data.table, parallel, yaml (>= 2.2.1), fst
       1.7.0), R6, BiocManager
 Suggests: testthat, rhdf5 (>= 2.36.0)
 License: GPL-3
-MD5sum: 1507c248604a8a795b02ee4bf6bd9380
+MD5sum: bde6c47e5be2d18e4d7744eba27f9ab8
 
 Package: rutabaga
 Version: 0.1.7
@@ -70,7 +70,7 @@ Depends: R (>= 3.5)
 Imports: utils, stats, grDevices, graphics, methods,
       magrittr, stringr (>= 1.3.1), digest, dipsaus
 License: GPL-3
-MD5sum: ae08eb7dc98c9620d230f87e52de84a8
+MD5sum: 505f185e5cb07a40ebe80d75cb676794
 
 Package: threeBrain
 Version: 0.2.1.9000
@@ -81,4 +81,4 @@ Imports: grDevices, graphics, dipsaus, xml2, shiny (>=
       0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown
 License: GPL-3 | file LICENSE
-MD5sum: b5e03e97c138d670a1db3a9470bc3e37
+MD5sum: 7151cbebe04cd486756a8281c9649de1
