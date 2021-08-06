@@ -1,5 +1,5 @@
 # Script to add packages
-os <- 'macosx/el-capitan'
+os <- 'macosx/contrib'
 # https://cran.rstudio.com/src/contrib
 rinfo <- R.Version()
 major <- rinfo$major
@@ -16,7 +16,7 @@ github_path <- 'tmp/source/github'
 download_path <- 'tmp/downloads'
 binary_path <- file.path(proj_dir, 'tmp', os)
 unlink(source_path, recursive = TRUE)
-unlink(binary_path, recursive = TRUE)
+# unlink(binary_path, recursive = TRUE)
 dir.create(binary_path, recursive = TRUE, showWarnings = FALSE)
 dir.create(github_path, recursive = TRUE, showWarnings = FALSE)
 unlink(download_path, recursive = TRUE)
