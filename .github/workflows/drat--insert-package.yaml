@@ -1,24 +1,3 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# NOTE 1:
-# This script automatically detects the repository in which it is run.
-# No edits are needed except in the "Install Dependencies" section where
-# one may need to install additional packages according to the needs.
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# NOTE 2:
-# Each "- name:" task below starts from the same directory, which is:
-# /home/runner/work/${{ REPOSITORY_NAME }}/${{ REPOSITORY_NAME }}
-# e.g.:
-# /home/runner/work/hyperSpec/hyperSpec
-# Each task is run in its own shell starting from this directory.
-# This means you have to navigate to the desired directory for each task.
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# NOTE 3:
-# If more than one branch given to trigger the workflow,
-# one may stomp on the other during deployment, so use only one branch.
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 on:
   push:
@@ -31,22 +10,18 @@ name: Compile Personal drat
 jobs:
   drat:
     runs-on: ${{ matrix.config.os }}
-
     name: ${{ matrix.config.os }} (R-${{ matrix.config.r }})
-
     strategy:
       fail-fast: false
       matrix:
         config:
         - {os: macOS-latest,   r: 'release'}
         - {os: windows-latest, r: 'release'}
-
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: ${{ matrix.config.rspm }}
       REPO: ${{ github.event.repository.name }}
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-
     steps:
       - uses: actions/checkout@v2
 
@@ -56,25 +31,29 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
 
       - uses: r-lib/actions/setup-pandoc@v1
+      
+      - name: Drat -- clone dipterix/drat
+        run: |
+          rm -rf drat-tmp
+          git clone https://github.com/dipterix/drat.git drat-tmp
+          cp ./tmp/prepare.R drat-tmp/prepare.R
+          cd drat-tmp
+          git checkout gh-pages
+          
+      - name: Test
+        run: |
+          cd drat-tmp
 
-      - name: Query dependencies
+      - name: Install dependencies
         run: |
           install.packages(c('remotes', 'BiocManager'))
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
 
-#      - name: Install system dependencies
-#        if: runner.os == 'Linux'
-#        run: |
-#          while read -r cmd
-#          do
-#            eval sudo $cmd
-#          done < <(Rscript -e 'writeLines(remotes::system_requirements("ubuntu", "18.04"))')
-
-      - name: Install dependencies
+      - name: Install packages
         shell: Rscript {0}
         run: |
-          remotes::install_cran(c("roxygen2", "devtools"), dependencies = TRUE, , upgrade = 'never')
+          remotes::install_cran(c("roxygen2", "devtools"), dependencies = TRUE, upgrade = 'never')
           BiocManager::install('rhdf5', update = FALSE, type = 'source')
           remotes::install_github(c(
             "dipterix/drat-1",
@@ -87,31 +66,11 @@ jobs:
             "beauchamplab/ravebuiltins@migrate2"
           ), dependencies = TRUE, upgrade = 'never')
 
-      - name: Download source packages
+      - name: Compile
         shell: Rscript {0}
         run: |
           repo_dname = ""
-          source("./tmp/prepare.R")
-
-# Above are the steps to build package
-# Below are the steps to deploy to pkg-repo
-      - name: Configure git
-        # The following configure step is from
-        # https://stackoverflow.com/a/60548651/633251
-        env:
-          TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-        run: |
-          git config --global url."https://${TOKEN}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
-          git config --global user.email "dipterix.wang@gmail.com"
-          git config --global user.name "Deploy Bot"
-
-      - name: Drat -- clone dipterix/drat
-        if: success()
-        run: |
-          rm -rf drat-tmp
-          git clone https://github.com/dipterix/drat.git drat-tmp
-          cd drat-tmp
-          git checkout gh-pages
+          source("./drat-tmp/prepare.R")
 
       - name: Drat -- insert
         if: success()
@@ -135,12 +94,15 @@ jobs:
           }
 
       - name: Drat -- commit and push
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: success()
         run: |
           cd drat-tmp
-          git add *
-          # .tar.gz files are globally blocked (git ignored) by git,
-          # must add manually and force it
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add -A *
           git add -f *.tar.gz
-          git commit -m "Automated deploy from ${REPO}"
-          git push origin gh-pages
+          git commit --allow-empty -m "Automated deploy from ${REPO}"
+          git remote -v
+          git push origin HEAD:gh-pages
