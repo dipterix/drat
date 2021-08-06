@@ -24,7 +24,7 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
-      - with:
+        with:
         ref: gh-pages
 
       - uses: r-lib/actions/setup-r@master
