@@ -1,6 +1,6 @@
 # Dipterix’s R Package Repository
 
-This is my personal [R package repository](https://dipterix.github.io/drat/). It contain the following R packages that are compiled locally.
+This is my personal R package repository (https://dipterix.github.io/drat/). It contain the following R packages that are compiled locally.
 
 * [dipsaus](https://github.com/dipterix/dipsaus)
 * [threeBrain](https://github.com/dipterix/threeBrain)
