@@ -16,12 +16,12 @@ jobs:
       max-parallel: 1
       matrix:
         config:
-        - {os: windows-latest, r: '3.6', rspm: "https://packagemanager.rstudio.com/cran/latest"}
         - {os: macOS-latest,   r: '3.6', rspm: "https://packagemanager.rstudio.com/cran/latest"}
-        - {os: windows-latest, r: 'oldrel', rspm: "https://packagemanager.rstudio.com/cran/latest"}
-        - {os: macOS-latest,   r: 'oldrel', rspm: "https://packagemanager.rstudio.com/cran/latest"}
-        - {os: windows-latest, r: 'release'}
-        - {os: macOS-latest,   r: 'release'}
+        - {os: windows-latest, r: '3.6', rspm: "https://packagemanager.rstudio.com/cran/latest"}
+        - {os: macOS-latest,   r: '4.0', rspm: "https://packagemanager.rstudio.com/cran/latest"}
+        - {os: windows-latest, r: '4.0', rspm: "https://packagemanager.rstudio.com/cran/latest"}
+        - {os: windows-latest, r: '4.1', rspm: "https://packagemanager.rstudio.com/cran/latest"}
+        - {os: macOS-latest,   r: '4.1', rspm: "https://packagemanager.rstudio.com/cran/latest"}
 #        - {os: macos-11,   r: 'oldrel', rspm: "https://packagemanager.rstudio.com/cran/latest"}
 #        - {os: macos-11,   r: 'release'}
     env:
