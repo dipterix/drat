@@ -28,7 +28,7 @@ dir.create(download_path, recursive = TRUE, showWarnings = FALSE)
 
 
 
-source("https://raw.githubusercontent.com/dipterix/drat/master/dependencies.R")
+source("https://raw.githubusercontent.com/dipterix/drat/master/scripts/dependencies.R")
 
 
 # Online dependencies
