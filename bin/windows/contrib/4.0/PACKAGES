@@ -10,8 +10,7 @@ LinkingTo: Rcpp, RcppParallel
 Suggests: knitr, rmarkdown, testthat, microbenchmark, magrittr, yaml,
         future.callr, remotes, glue
 License: GPL-3
-MD5sum: ee0733126296668770f966237f03a89d
-NeedsCompilation: yes
+Archs: i386, x64
 
 Package: rave
 Version: 1.0.2.1
@@ -27,8 +26,6 @@ Suggests: knitr, rhdf5, data.table (>= 1.11.8), servr (>= 0.13),
         reticulate (>= 1.6), rmarkdown, spelling, roxygen2, testthat,
         lobstr, rstudioapi
 License: GPL-3
-MD5sum: cfc7eeb6cc42ca82b29d450b76fff5bc
-NeedsCompilation: no
 
 Package: ravebase
 Version: 0.0.1
@@ -36,8 +33,6 @@ Imports: utils, stats, raveio, dipsaus, threeBrain, lazyarray, rlang,
         future, cli, stringr
 Suggests: shiny, testthat
 License: GPL-3
-MD5sum: cf9ac9048e5550406ac76c925c2d3231
-NeedsCompilation: no
 
 Package: ravebuiltins
 Version: 0.1.1
@@ -50,8 +45,6 @@ Imports: methods, stats, grDevices, graphics, grid, abind, car, utils,
 Suggests: devtools, htmltools, fastmap, lsmeans, rstudioapi (>= 0.9.0),
         yaml (>= 2.2.0), future (>= 0.14.0)
 License: MIT + file LICENSE
-MD5sum: 6cc7135e2310b6e8bd666be36aaf8db8
-NeedsCompilation: no
 
 Package: raveio
 Version: 0.0.4.9000
@@ -62,8 +55,6 @@ Imports: utils, data.table, parallel, yaml (>= 2.2.1), fst (>= 0.9.2),
         0.3.1), jsonlite (>= 1.7.0), R6, BiocManager
 Suggests: testthat, rhdf5 (>= 2.36.0)
 License: GPL-3
-MD5sum: 33a9923b01c237be01042d3575b8d9f2
-NeedsCompilation: no
 
 Package: rutabaga
 Version: 0.1.7
@@ -71,8 +62,6 @@ Depends: R (>= 3.5)
 Imports: utils, stats, grDevices, graphics, methods, magrittr, stringr
         (>= 1.3.1), digest, dipsaus
 License: GPL-3
-MD5sum: 7738d27f90448fe5a13b7c84a2178635
-NeedsCompilation: no
 
 Package: threeBrain
 Version: 0.2.1.9000
@@ -82,5 +71,3 @@ Imports: grDevices, graphics, dipsaus, xml2, shiny (>= 1.2.0), digest
         (>= 0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown
 License: GPL-3 | file LICENSE
-MD5sum: afde0267e5be541c6971ab73160c92ba
-NeedsCompilation: no
