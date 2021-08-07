@@ -47,15 +47,14 @@ jobs:
           remotes::install_github(c(
             "dipterix/drat-1"
           ), dependencies = TRUE, upgrade = 'never')
-          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
       
       - uses: actions/cache@v2
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
-          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
+          key: ${{ runner.os }}-${{ matrix.config.r }}-1-
+          restore-keys: ${{ runner.os }}-${{ matrix.config.r }}-1-
       
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
