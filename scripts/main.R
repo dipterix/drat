@@ -13,10 +13,6 @@ dir.create(repo_dir, showWarnings = FALSE, recursive = TRUE)
 options(dratRepo = repo_dir)
 drat::addRepo('dipterix', paste0('file:', repo_dir))
 
-if(!file.exists(file.path(repo_dir, 'index.html'))){
-  writeLines("<!doctype html><title>empty</title>", file.path(repo_dir, 'index.html'))
-}
-
 source_path <- './tmp/source/'
 github_path <- './tmp/source/github'
 download_path <- './tmp/downloads'
