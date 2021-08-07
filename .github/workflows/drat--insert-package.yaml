@@ -16,14 +16,14 @@ jobs:
       max-parallel: 1
       matrix:
         config:
-        - {os: macos-11,   r: 'oldrel', rspm: "https://packagemanager.rstudio.com/cran/latest"}
-        - {os: macos-11,   r: 'release'}
-#        - {os: windows-latest, r: '3.6', rspm: "https://packagemanager.rstudio.com/cran/latest"}
-#        - {os: macOS-latest,   r: '3.6', rspm: "https://packagemanager.rstudio.com/cran/latest"}
-#        - {os: windows-latest, r: 'oldrel', rspm: "https://packagemanager.rstudio.com/cran/latest"}
-#        - {os: macOS-latest,   r: 'oldrel', rspm: "https://packagemanager.rstudio.com/cran/latest"}
-#        - {os: windows-latest, r: 'release'}
-#        - {os: macOS-latest,   r: 'release'}
+        - {os: windows-latest, r: '3.6', rspm: "https://packagemanager.rstudio.com/cran/latest"}
+        - {os: macOS-latest,   r: '3.6', rspm: "https://packagemanager.rstudio.com/cran/latest"}
+        - {os: windows-latest, r: 'oldrel', rspm: "https://packagemanager.rstudio.com/cran/latest"}
+        - {os: macOS-latest,   r: 'oldrel', rspm: "https://packagemanager.rstudio.com/cran/latest"}
+        - {os: windows-latest, r: 'release'}
+        - {os: macOS-latest,   r: 'release'}
+#        - {os: macos-11,   r: 'oldrel', rspm: "https://packagemanager.rstudio.com/cran/latest"}
+#        - {os: macos-11,   r: 'release'}
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: ${{ matrix.config.rspm }}
@@ -44,6 +44,9 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages(c('remotes', 'BiocManager'))
+          remotes::install_github(c(
+            "dipterix/drat-1",
+          ), dependencies = TRUE, upgrade = 'never')
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
       
@@ -56,33 +59,19 @@ jobs:
       
       - name: Install dependencies
         run: |
-          remotes::install_cran(c("roxygen2", "devtools"), dependencies = TRUE, upgrade = 'never')
-          BiocManager::install('rhdf5', update = FALSE, type = 'source')
-          remotes::install_cran(c("dipsaus", "raveio", "threeBrain"), dependencies = TRUE, upgrade = 'never')
-          remotes::install_github(c(
-            "dipterix/drat-1",
-            "beauchamplab/ravebuiltins@migrate2"
-          ), dependencies = TRUE, upgrade = 'never')
+          source("https://raw.githubusercontent.com/dipterix/drat/master/scripts/prerequisite.R")
         shell: Rscript {0}
       
       - name: Install packages
         run: |
-          remotes::install_github(c(
-            "dipterix/dipsaus",
-            "dipterix/threeBrain",
-            "beauchamplab/raveio",
-            "dipterix/rutabaga@develop", 
-            "beauchamplab/rave",
-            "dipterix/ravebase",
-            "beauchamplab/ravebuiltins@migrate2"
-          ), dependencies = TRUE, upgrade = 'never')
+          source("https://raw.githubusercontent.com/dipterix/drat/master/scripts/installs.R")
         shell: Rscript {0}
 
       - name: Compile
         shell: Rscript {0}
         run: |
           repo_dname = ""
-          source("https://raw.githubusercontent.com/dipterix/drat/master/tmp/prepare.R")
+          source("https://raw.githubusercontent.com/dipterix/drat/master/scripts/main.R")
 
       - name: Drat -- commit and push
         if: success()
