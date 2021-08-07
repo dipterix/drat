@@ -3,26 +3,12 @@
 
 # available packages: remotes, drat (from dipterix/drat-1) and BiocManager
 
+# IMPORTANT: this script only run once (results will be cached)
 
-if(!dipsaus::package_installed('rhdf5')){
-  BiocManager::install('rhdf5', update = FALSE, type = 'source')
-}
+BiocManager::install('rhdf5', update = FALSE, type = 'source')
+remotes::install_cran(c("roxygen2", "devtools", "dipsaus", "raveio", "threeBrain"), dependencies = TRUE, upgrade = 'never')
 
-install_if_not_exists <- function(pkgs){
-  sel <- sapply(pkgs, function(p){
-    system.file(package = p) == ""
-  })
-  pkgs <- pkgs[sel]
-  if(length(pkgs)){
-    remotes::install_cran(pkgs, dependencies = TRUE, upgrade = 'never')
-  }
-}
-
-install_if_not_exists(c("roxygen2", "devtools", "dipsaus", "raveio", "threeBrain"))
-
-if(!dipsaus::package_installed('ravebuiltins')){
-  remotes::install_github(c(
-    "beauchamplab/ravebuiltins@migrate2"
-  ), dependencies = TRUE, upgrade = 'never')
-}
+remotes::install_github(c(
+  "beauchamplab/ravebuiltins@migrate2"
+), dependencies = TRUE, upgrade = 'never')
 

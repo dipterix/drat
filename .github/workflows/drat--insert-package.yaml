@@ -45,19 +45,20 @@ jobs:
         run: |
           install.packages(c('remotes', 'BiocManager'))
           remotes::install_github(c(
-            "dipterix/drat-1",
+            "dipterix/drat-1"
           ), dependencies = TRUE, upgrade = 'never')
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
       
-      - name: Cache R packages
-        uses: actions/cache@v2
+      - uses: actions/cache@v2
+        id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
           key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
       
       - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           source("https://raw.githubusercontent.com/dipterix/drat/master/scripts/prerequisite.R")
         shell: Rscript {0}
