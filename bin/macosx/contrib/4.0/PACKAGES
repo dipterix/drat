@@ -10,8 +10,7 @@ LinkingTo: Rcpp, RcppParallel
 Suggests: knitr, rmarkdown, testthat, microbenchmark, magrittr, yaml,
         future.callr, remotes, glue
 License: GPL-3
-MD5sum: c1b2b52ca93bbff71816832c066f5158
-NeedsCompilation: yes
+MD5sum: 94acd4d15cf2d3d5320bffc5d6f70d56
 
 Package: rave
 Version: 1.0.2.1
@@ -27,8 +26,7 @@ Suggests: knitr, rhdf5, data.table (>= 1.11.8), servr (>= 0.13),
         reticulate (>= 1.6), rmarkdown, spelling, roxygen2, testthat,
         lobstr, rstudioapi
 License: GPL-3
-MD5sum: 4dae751f68d02e966355b3452b263627
-NeedsCompilation: no
+MD5sum: 9f081ff942f98327d6f853aa6f685342
 
 Package: ravebase
 Version: 0.0.1
@@ -36,8 +34,7 @@ Imports: utils, stats, raveio, dipsaus, threeBrain, lazyarray, rlang,
         future, cli, stringr
 Suggests: shiny, testthat
 License: GPL-3
-MD5sum: 8a8920447c4bd8532e03382708beb431
-NeedsCompilation: no
+MD5sum: 8d2287a36e1b41ab4ecdae3a30dfe2db
 
 Package: ravebuiltins
 Version: 0.1.1
@@ -50,8 +47,7 @@ Imports: methods, stats, grDevices, graphics, grid, abind, car, utils,
 Suggests: devtools, htmltools, fastmap, lsmeans, rstudioapi (>= 0.9.0),
         yaml (>= 2.2.0), future (>= 0.14.0)
 License: MIT + file LICENSE
-MD5sum: 7d4d36bfe177579b63fc3c943bc62d23
-NeedsCompilation: no
+MD5sum: cc1f7690e9aa0aa303cbf9b30d0fecfe
 
 Package: raveio
 Version: 0.0.4.9000
@@ -62,8 +58,7 @@ Imports: utils, data.table, parallel, yaml (>= 2.2.1), fst (>= 0.9.2),
         0.3.1), jsonlite (>= 1.7.0), R6, BiocManager
 Suggests: testthat, rhdf5 (>= 2.36.0)
 License: GPL-3
-MD5sum: c606eb5f1b1dd82d56dd06113269777f
-NeedsCompilation: no
+MD5sum: fbca70fc9fe14439239f5042844b9d73
 
 Package: rutabaga
 Version: 0.1.7
@@ -71,8 +66,7 @@ Depends: R (>= 3.5)
 Imports: utils, stats, grDevices, graphics, methods, magrittr, stringr
         (>= 1.3.1), digest, dipsaus
 License: GPL-3
-MD5sum: c99b5894f8b08c5290ec411dc7344d6f
-NeedsCompilation: no
+MD5sum: e0e00c9dd73cdc8d2308c82fe7902981
 
 Package: threeBrain
 Version: 0.2.1.9000
@@ -82,5 +76,4 @@ Imports: grDevices, graphics, dipsaus, xml2, shiny (>= 1.2.0), digest
         (>= 0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown
 License: GPL-3 | file LICENSE
-MD5sum: b7fee3c706bc1d16e44f94504eddac24
-NeedsCompilation: no
+MD5sum: c51d914c8ad735ec7f0fed0ac52c121e
