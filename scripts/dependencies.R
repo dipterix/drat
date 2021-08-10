@@ -24,7 +24,7 @@ dependencies <- list(
     type = 'github'
   ),
   'rave' = list(
-    url = 'https://github.com/beauchamplab/rave/archive/master.zip',
+    url = 'https://github.com/beauchamplab/rave/archive/1.0.3.zip',
     type = 'github'
   )
 )
