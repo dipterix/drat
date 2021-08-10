@@ -10,7 +10,7 @@ LinkingTo: Rcpp, RcppParallel
 Suggests: knitr, rmarkdown, testthat, microbenchmark, magrittr, yaml,
         future.callr, remotes, glue
 License: GPL-3
-MD5sum: 1a31b103f6192c4c330c2366df4e55c8
+MD5sum: 917683ab38d212873f3d71051e7327ca
 NeedsCompilation: yes
 
 Package: rave
@@ -28,7 +28,7 @@ Suggests: knitr, rhdf5, data.table (>= 1.11.8), servr (>= 0.13),
         reticulate (>= 1.6), rmarkdown, spelling, roxygen2, testthat,
         lobstr, rstudioapi
 License: GPL-3
-MD5sum: 2bfbc749e4a3b0e35a89b69fbd9356f7
+MD5sum: aa2b16365e087fa14c515ca2fb6aa349
 NeedsCompilation: no
 
 Package: ravebase
@@ -37,7 +37,7 @@ Imports: utils, stats, raveio, dipsaus, threeBrain, lazyarray, rlang,
         future, cli, stringr
 Suggests: shiny, testthat
 License: GPL-3
-MD5sum: 718e92c62c07fbe0deb515259f3e46c1
+MD5sum: a9fb33a6299f6fb18f3597446179e105
 NeedsCompilation: no
 
 Package: ravebuiltins
@@ -51,7 +51,7 @@ Imports: methods, stats, grDevices, graphics, grid, abind, car, utils,
 Suggests: devtools, htmltools, fastmap, lsmeans, rstudioapi (>= 0.9.0),
         yaml (>= 2.2.0), future (>= 0.14.0)
 License: MIT + file LICENSE
-MD5sum: 30d24d97c2aa3e691db549a49c65ac3e
+MD5sum: 5c0a8e3b6c5b6faa32244a3a1b470639
 NeedsCompilation: no
 
 Package: raveio
@@ -63,7 +63,7 @@ Imports: utils, data.table, parallel, yaml (>= 2.2.1), fst (>= 0.9.2),
         0.3.1), jsonlite (>= 1.7.0), R6, BiocManager
 Suggests: testthat, rhdf5 (>= 2.36.0)
 License: GPL-3
-MD5sum: 5fcd5e024589b00f5e5c45b794416d0b
+MD5sum: 7fa66b08661cccd32931ec734f1fa4e0
 NeedsCompilation: no
 
 Package: rutabaga
@@ -72,7 +72,7 @@ Depends: R (>= 3.5)
 Imports: utils, stats, grDevices, graphics, methods, magrittr, stringr
         (>= 1.3.1), digest, dipsaus
 License: GPL-3
-MD5sum: 7369a4351beb0bbbd707b576481cb9be
+MD5sum: 0de099bbc8fcf87a05715246296a6d51
 NeedsCompilation: no
 
 Package: threeBrain
@@ -83,5 +83,5 @@ Imports: grDevices, graphics, dipsaus, xml2, shiny (>= 1.2.0), digest
         (>= 0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown
 License: GPL-3 | file LICENSE
-MD5sum: 3c02f32776ee69e57268d1d2181c7ef8
+MD5sum: beed5dea1b22f2c3e36d978190793301
 NeedsCompilation: no

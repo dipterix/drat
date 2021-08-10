@@ -13,15 +13,16 @@ License: GPL-3
 Archs: i386, x64
 
 Package: rave
-Version: 1.0.2.1
-Depends: R (>= 3.6.0), raveio (>= 0.0.4)
+Version: 1.0.2.2
+Depends: R (>= 3.6.0), raveio (>= 0.0.4.9000)
 Imports: utils, stats, graphics, grDevices, lazyarray, htmltools (>=
-        0.3.6), devtools, grid, signal (>= 0.7-6), dipsaus (>= 0.1.1),
-        R6 (>= 2.2.2), future (>= 1.10.0), shiny (>= 1.0.5), stringr
-        (>= 1.2.0), shinydashboard (>= 0.6.0), fftwtools (>= 0.9-7),
-        digest (>= 0.6.13), shinyjs (>= 1.0), rlang (>= 0.1.6.9000), DT
-        (>= 0.4), startup (>= 0.12.0), threeBrain (>= 0.1.8),
-        shinyFiles (>= 0.7.3), shinyWidgets (>= 0.5.3)
+        0.3.6), devtools, grid, signal (>= 0.7-6), dipsaus (>=
+        0.1.7.9000), R6 (>= 2.2.2), future (>= 1.10.0), shiny (>=
+        1.0.5), stringr (>= 1.2.0), shinydashboard (>= 0.6.0),
+        fftwtools (>= 0.9-7), digest (>= 0.6.13), shinyjs (>= 1.0),
+        rlang (>= 0.1.6.9000), DT (>= 0.4), startup (>= 0.12.0),
+        threeBrain (>= 0.2.1), shinyFiles (>= 0.7.3), shinyWidgets (>=
+        0.5.3)
 Suggests: knitr, rhdf5, data.table (>= 1.11.8), servr (>= 0.13),
         reticulate (>= 1.6), rmarkdown, spelling, roxygen2, testthat,
         lobstr, rstudioapi
