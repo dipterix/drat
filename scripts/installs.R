@@ -1,7 +1,8 @@
 # This script makes sure the desired packages can be installed or updated
 
+remotes::install_github("dipterix/dipsaus", dependencies = TRUE, upgrade = 'always')
+
 remotes::install_github(c(
-  "dipterix/dipsaus",
   "dipterix/threeBrain",
   "beauchamplab/raveio",
   "dipterix/rutabaga@develop", 
