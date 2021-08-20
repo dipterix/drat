@@ -1,9 +1,0 @@
-^.*\.Rproj$
-^\.Rproj\.user$
-^adhoc$
-^\.travis\.yml$
-^docs$
-^cran-comments\.md$
-^CRAN-RELEASE$
-^\.github$
-^cache$
