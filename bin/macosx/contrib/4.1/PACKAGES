@@ -10,7 +10,7 @@ LinkingTo: Rcpp, RcppParallel
 Suggests: knitr, rmarkdown, testthat, microbenchmark, magrittr, yaml,
         future.callr, remotes, glue
 License: GPL-3
-MD5sum: 3f49d57ca61eec180ed569d853fd52e9
+MD5sum: b2b0b30d6efa4696772fa249fc0ab3cc
 
 Package: rave
 Version: 1.0.2.2
@@ -27,7 +27,7 @@ Suggests: knitr, rhdf5, data.table (>= 1.11.8), servr (>= 0.13),
         reticulate (>= 1.6), rmarkdown, spelling, roxygen2, testthat,
         lobstr, rstudioapi
 License: GPL-3
-MD5sum: 2c54b735eaa13b0a4f82126c533fa609
+MD5sum: 1eca663f1385110a45902b27ebead8c7
 
 Package: ravebase
 Version: 0.0.1
@@ -35,7 +35,7 @@ Imports: utils, stats, raveio, dipsaus, threeBrain, lazyarray, rlang,
         future, cli, stringr
 Suggests: shiny, testthat
 License: GPL-3
-MD5sum: f45c15df56a3a69a5446e76c4452f6b1
+MD5sum: 4fee520695226a5014bf1ab7a5568868
 
 Package: ravebuiltins
 Version: 0.1.1
@@ -48,10 +48,10 @@ Imports: methods, stats, grDevices, graphics, grid, abind, car, utils,
 Suggests: devtools, htmltools, fastmap, lsmeans, rstudioapi (>= 0.9.0),
         yaml (>= 2.2.0), future (>= 0.14.0)
 License: MIT + file LICENSE
-MD5sum: 55523d0eded6852db5fcc18cf2af3ff9
+MD5sum: 6d6d9f791980ce59e2b3faed35bcb26a
 
 Package: raveio
-Version: 0.0.4.9000
+Version: 0.0.4.9001
 Depends: R (>= 3.6.0)
 Imports: utils, data.table, parallel, yaml (>= 2.2.1), fst (>= 0.9.2),
         dipsaus (>= 0.0.9), R.matlab (>= 3.6.2), glue, later, stringr
@@ -59,7 +59,7 @@ Imports: utils, data.table, parallel, yaml (>= 2.2.1), fst (>= 0.9.2),
         0.3.1), jsonlite (>= 1.7.0), R6, BiocManager
 Suggests: testthat, rhdf5 (>= 2.36.0)
 License: GPL-3
-MD5sum: 9e5ccc2e568ee9a453c69ae3be053c90
+MD5sum: c73fd23f60d8c6f7453cad6122882b7c
 
 Package: rutabaga
 Version: 0.1.7
@@ -67,7 +67,7 @@ Depends: R (>= 3.5)
 Imports: utils, stats, grDevices, graphics, methods, magrittr, stringr
         (>= 1.3.1), digest, dipsaus
 License: GPL-3
-MD5sum: 09cffb18e11929c3a1514884dd5817cc
+MD5sum: a9ea2712ee171d4d821ae70ebd35bf35
 
 Package: threeBrain
 Version: 0.2.2
@@ -77,4 +77,4 @@ Imports: grDevices, graphics, dipsaus, xml2, shiny (>= 1.2.0), digest
         (>= 0.7.5), oro.nifti (>= 0.9.1)
 Suggests: knitr, rmarkdown
 License: GPL-3 | file LICENSE
-MD5sum: d693e0599d8dd03a2172d8833f1b525f
+MD5sum: 63742e53695b4a1d9e063c01aac7974b
